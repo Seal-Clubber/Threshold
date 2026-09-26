@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081522">
+  <title>Threshold — a bounty in motion</title>
+  <meta name="description" content="An interactive wire diagram of confidential matched funding, milestone payments, and independent recovery.">
+  <link rel="stylesheet" href="/wire.css">
+  <script src="/wire.js" defer></script>
+  <script src="/sandbox.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <span class="brand"><span class="brand-mark">◇</span> threshold<span class="brand-period">.</span></span>
+      <span class="top-label">INTERACTIVE BOUNTY MAP</span>
+      <div class="top-actions">
+        <button id="sandbox-open" class="chrome-button sandbox-launch" type="button">◇ Sandbox</button>
+        <button id="theme-toggle" class="chrome-button" type="button" aria-label="Switch to light mode" aria-pressed="true">◐ <span id="theme-label">Light</span></button>
+        <button id="back" class="chrome-button" type="button">← Back in time</button>
+        <button id="next" class="chrome-button" type="button">Continue ↓</button>
+      </div>
+    </header>
+    <div class="status-strip" aria-label="Current hypothetical outcome">
+      <span class="status-brand">HYPOTHETICAL BOUNTY</span>
+      <span>Community <strong id="community-total">60 / 60</strong></span>
+      <span>Sponsor <strong id="sponsor-total">40 / 40</strong></span>
+      <span>Paid <strong id="paid-total">100 / 100</strong></span>
+      <span id="status-label" class="status-label">SUCCESS PATH</span>
+    </div>
+    <main id="flow-scroll" class="flow-scroll">
+      <section class="intro" aria-labelledby="intro-title">
+        <span class="eyebrow">THRESHOLD / INTERACTIVE BOUNTY MAP</span>
+        <h1 id="intro-title">One bounty.<br><em>Many possible paths.</em></h1>
+        <p>Start with every switch off. Pledge the full match, then follow the bounty through payment, delivery, review, and recovery. Go back to change a decision. Open Sandbox to explore other campaign designs separately.</p>
+        <div class="legend"><span><i class="legend-main"></i> Successful route</span><span><i class="legend-branch"></i> Alternative route</span><span><i class="legend-current"></i> Reached outcome</span></div>
+      </section>
+      <div id="flow" class="flow" aria-label="Interactive bounty wire diagram"></div>
+      <p class="footnote">Illustrative simulation only: these switches do not move funds or query the chain. The separate sandbox does not alter this bounty. In a real campaign, frozen terms cannot change after pledging; a completed refund cannot be rewound.</p>
+    </main>
+  </div>
+  <dialog id="sandbox-dialog" class="sandbox-dialog" aria-labelledby="sandbox-title">
+    <div class="sandbox-head"><span class="sandbox-kicker">EXPLORE THE PROTOCOL</span><button id="sandbox-close" type="button" aria-label="Close sandbox">×</button></div>
+    <h2 id="sandbox-title">Campaign sandbox</h2>
+    <p>Sketch funding terms for your own idea. This planner is independent of the bounty map and never moves funds.</p>
+    <div class="sandbox-presets"><span>STARTING POINTS</span><button type="button" data-sandbox-preset="bounty">Developer bounty</button><button type="button" data-sandbox-preset="tool">Shared tool</button><button type="button" data-sandbox-preset="many">100+ funders</button></div>
+    <div class="sandbox-layout">
+      <div class="sandbox-controls">
+        <label class="sandbox-field"><span>Total budget <small>tTARI</small></span><input id="sandbox-budget" type="number" min="1" max="100000" step="1" value="100"></label>
+        <label class="sandbox-field"><span>Community share <output id="sandbox-share-value">60%</output></span><input id="sandbox-share" type="range" min="1" max="99" step="1" value="60"></label>
+        <label class="sandbox-field"><span>Upfront after full match <output id="sandbox-upfront-value">10%</output></span><input id="sandbox-upfront" type="range" min="1" max="60" step="1" value="10"></label>
+        <div class="sandbox-pair"><label class="sandbox-field"><span>Milestones</span><input id="sandbox-stages" type="number" min="2" max="12" step="1" value="2"></label><label class="sandbox-field"><span>Pledge records</span><input id="sandbox-pledges" type="number" min="2" max="200" step="1" value="4"></label></div>
+        <div class="sandbox-pair"><label class="sandbox-field"><span>Reviewer keys</span><input id="sandbox-reviewers" type="number" min="1" max="20" step="1" value="2"></label><label class="sandbox-field"><span>Votes needed</span><input id="sandbox-quorum" type="number" min="1" max="20" step="1" value="2"></label></div>
+        <div class="sandbox-pair"><label class="sandbox-field"><span>Funding closes <small>epochs</small></span><input id="sandbox-funding-epochs" type="number" min="1" max="10000" step="1" value="20"></label><label class="sandbox-field"><span>Stage spacing <small>epochs</small></span><input id="sandbox-stage-epochs" type="number" min="1" max="10000" step="1" value="20"></label></div>
+        <details class="sandbox-advanced"><summary>Adjust reviewed stage weights</summary><div id="sandbox-weights"></div></details>
+      </div>
+      <div class="sandbox-preview" aria-live="polite">
+        <div id="sandbox-viability" class="sandbox-viability"></div>
+        <div class="sandbox-summary"><div><span>COMMUNITY</span><strong id="sandbox-community-result">60</strong></div><div><span>SPONSOR</span><strong id="sandbox-sponsor-result">40</strong></div><div><span>FIRST PAYMENT</span><strong id="sandbox-first-result">10</strong></div></div>
+        <label class="sandbox-field sandbox-progress"><span>Try the funding gate <output id="sandbox-progress-value">80% pledged</output></span><input id="sandbox-progress" type="range" min="0" max="100" step="1" value="80"></label><div id="sandbox-gate" class="sandbox-gate"></div>
+        <strong class="sandbox-preview-title">Payment schedule</strong><div id="sandbox-schedule" class="sandbox-schedule"></div>
+        <p class="sandbox-note">Recipient, sponsor and reviewer keys, exact stage amounts, evidence policy and deadlines must be frozen before pledging. Real payouts also need recipient signatures; reviewed stages need timely quorum. Each owner can recover eligible unpaid cells with their own recovery package and fee funds.</p>
+      </div>
+    </div>
+    <div class="sandbox-actions"><button id="sandbox-reset" type="button">Reset example</button><button id="sandbox-done" type="button">Done</button></div>
+  </dialog>
+</body>
+</html>

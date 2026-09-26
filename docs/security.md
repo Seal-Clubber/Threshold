@@ -1,0 +1,40 @@
+# Security and privacy notes
+
+Threshold v1 is unaudited testnet code. It assumes correct Ootle consensus, native stealth proofs, fixed Pedersen generators, component-scoped script evaluation, and finality of committed receipts. The component has `OwnerRule::None`; it exposes no admin, cancel, upgrade, sweep, or term-edit method. The published template address and frozen component state must be checked before funding.
+
+## What is enforced on chain
+
+Every registered pledge executes a native confidential transfer and records the resulting commitments in the same main intent. One pure `Script` UTXO per stage has the root for this component only; a key alternative is rejected at registration. At activation, the component checks every role/stage commitment sum against the frozen public budget and an aggregate opening, then updates the entire bundle state in one transaction. It never trusts a caller supplied list of bundle legs.
+
+A release consumes exactly all selected cells of the current stage, with no extra inputs, no revealed funds, and one private key output. The frozen recipient must sign the release; designated reviewer keys must agree on one evidence hash for later stages. The recipient chooses the private output and can redirect it **with their own signature**, just as they could transfer funds after receipt. The component does not cryptographically prove that the output ciphertext decrypts to the frozen recipient. A client must verify decryption before signing. If a strict, immutable payout key is required, v1 needs a policy change to bind output authorization to the frozen recipient key; this would expose a static payout key and require a new template/deployment.
+The native `v1_payout_shape_does_not_prove_recipient_decryption` test constructs a value-conserving transfer whose output decrypts to an alternate key while satisfying the v1 spend-shape check. This makes the limitation executable evidence, not an assumption. A static key rule would still need careful treatment of confidential output openings; the current Ootle template cannot verify ciphertext decryptability to a specified payee.
+
+Refunds consume only the owner's eligible unspent cells and are signed by that owner. The exact input set plus native balance proof prevents a partial owner claim, extra output, or inflation. Before activation the refund right opens at the funding deadline. After activation, unselected pledges are immediately refundable; selected pledges become refundable at the first unreleased stage deadline. Paid tranches cannot be refunded. Fees are paid separately from escrow. No exact proportional refund calculation is needed because each contributor's entitlement remains in their own pre-split cells.
+
+## Who can learn or do what
+
+| Actor | Can learn | Can control |
+|---|---|---|
+| Public observer | Campaign terms, stage/role totals, signer keys, number of pledges, commitments, encrypted output data, transaction timing/fees, activation aggregate masks, votes and receipts. Small groups or known contributions can reveal amounts by subtraction. | Submit any transaction, but cannot bypass the component lock or change frozen terms. |
+| Contributor or sponsor | Own amounts, blinding masks, refund key, tranche openings, and any details others voluntarily share. | Fund a pledge, withhold an activation opening, or recover eligible unspent cells. A backup package and fee reserve are needed. |
+| Coordinator | Individual values and masks **if contributors share openings** to assemble aggregate masks. It can link identities and timing. | Propose which whole pledges activate. It cannot pass incorrect sums or redirect escrow, but can withhold a matching activation; the deadline then enables recovery. |
+| Recipient | Frozen budget and private total payout after decryption. | Sign or withhold the release, and choose its private output. It cannot release before quorum or after the deadline. |
+| Reviewer | Evidence hash, terms and public status. | Cast one vote per stage. A quorum can approve weak evidence or collude with the recipient; no cryptographic proof of work quality is claimed. |
+| Indexer | Public ledger metadata and encrypted payloads; not masks or values without openings. | Serve stale, withheld, or misleading data. The client checks the indexer's `verified` flag, not a locally checked consensus proof. Cross-check another indexer or validator for high-value use. |
+
+Ootle's native stealth outputs hide values cryptographically from ordinary public observers. They do not hide the number of contributors, signer keys, campaign participation, sponsor identity, approval votes, fees, or the existence of a refund. Source-linked demo fixture amounts are public examples; they should not be used to claim anonymity for those four synthetic identities. The recipient and refund owner sign transactions with visible keys. Static public budgets and one sponsor pledge expose the sponsor's total by design.
+
+## Remaining trust and availability limits
+
+- Sponsor separation is by frozen signing key. Alternate wallets can represent the same human, so this is exact-value matching, **not** quadratic or personhood matching.
+- The network has no generic private-balance computation or pooled private pro-rata claim primitive exposed to this template. A pooled vault with later proportional private refunds would require additional verified cryptography and cannot be inferred from native privacy alone.
+- The component can reject a malformed encrypted payout shape but cannot verify the ciphertext decrypts to a payee. Recipient software must check before signing. A compromised recipient key can authorize a redirected payment; a compromised reviewer key can approve weak evidence. If the same key holds both roles, it can do both.
+- Reviewers judge evidence. A GitHub event or CI result is not automatic proof of delivery. If reviewers disappear or disagree, refunds open only at the deadline.
+- The live fixture uses reviewer keys distinct from the recipient and sponsor, but the v1 `Terms` validator does not require that separation for arbitrary new campaigns. A recipient could be designated as their own reviewer if contributors accept those frozen terms. The current component enforces only the selected key/quorum policy, not human independence. A stricter template should reject reviewer keys equal to the recipient or sponsor; no on-chain rule can prove that different keys represent independent people.
+- `AcceptFeeRejectRest` and `FeeIntentCommit` are **not** successful funding or payout. A separate fee spend may persist on a failed main intent; clients check `any_reject()` and final receipt `Commit`.
+- UTXOs with tiny values can be economically unrecoverable if separate fee funds run out. V1 enforces only a constant 1 microtari minimum promise; it does not guarantee a profitable refund. Campaign creators and clients should choose a practical minimum pledge and maintain a separate fee reserve. No value is deducted from escrow for fees.
+- Only the `pledge` method atomically registers and locks outputs. Sending a private output directly to the component's script root without registration creates no recorded owner entitlement or refund right; clients must never treat such a transfer as a pledge. The component rejects recycling already registered commitments, but v1 does not reject every possible unregistered script-path input to `pledge`. A stricter future template should require key-path inputs for new pledges.
+- The verified-indexer flag is reported by the indexer. The standalone recovery client has no independently implemented light-client proof verifier and still needs a reachable honest chain data route. The coordinator and its database are absent from recovery.
+- The provided testnet scripts use one known public indexer by default. A supplied URL can point recovery at another Esmeralda indexer. The ledger, not the backend or UI, evaluates the component's rules.
+
+See [verification](verification.md) for what has actually run and [protocol](protocol.md) for the state machine and exact checks.
