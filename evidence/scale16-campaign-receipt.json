@@ -1,0 +1,56 @@
+{
+  "receipt": {
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+          "value_hash": "6f9033eb1b1866a1f27b32f689f4f2aec00c968f9a90d8d51ab931805ab4fec9",
+          "version": 16
+        },
+        {
+          "substate_id": "component_638d03f094ce96bf91cf080fbabfa4a5c61f3ee9ee674924b278b0f006d0905a",
+          "value_hash": "82c796ecf3a48c02079d2ecf275c2e60dbafc56b64f92dcb95ae573c4a6974dc",
+          "version": 0
+        }
+      ]
+    },
+    "epoch": 11465,
+    "events": [
+      {
+        "payload": {
+          "amount": "5000000"
+        },
+        "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee"
+      },
+      {
+        "payload": {},
+        "substate_id": "component_638d03f094ce96bf91cf080fbabfa4a5c61f3ee9ee674924b278b0f006d0905a",
+        "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+        "topic": "std.component.created"
+      }
+    ],
+    "fee_receipt": {
+      "cost_breakdown": {
+        "breakdown": {
+          "NativeExecution": 397,
+          "RuntimeCall": 9,
+          "Storage": 853,
+          "SubstateCreate": 50,
+          "TemplateLoad": 1010,
+          "TransactionWeight": 134,
+          "WasmExecution": 79
+        }
+      },
+      "exhaust_burn": 126,
+      "total_fee_overcharge": 0,
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 2532
+    },
+    "fee_withdrawals": [],
+    "intent_commitment": "575c3ca57a00c1a9c4a3ce5c8ac364edb2028f8490eabf90e654a45b8b1038aa",
+    "outcome": "Commit"
+  },
+  "transaction_id": "9f8963f5f2c1f9781c766de89efbd0e65901696d70b34384d51125d91ec43b01"
+}

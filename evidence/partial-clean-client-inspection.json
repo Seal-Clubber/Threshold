@@ -1,0 +1,20 @@
+{
+  "network": "esmeralda",
+  "observed_epoch": 11441,
+  "client": "isolated Ubuntu directory containing only copied binary, encrypted packages, unlock file, and prior independent recovery artifacts",
+  "community": {
+    "pledge_id": 0,
+    "remaining_cells": 1,
+    "amount_microtari": 3000000,
+    "refund_epoch": 11445,
+    "premature_recovery_result": "refund not yet eligible",
+    "journal_created": false
+  },
+  "sponsor": {
+    "pledge_id": 1,
+    "remaining_cells": 1,
+    "amount_microtari": 2000000,
+    "refund_epoch": 11445
+  },
+  "note": "The standalone client checked fresh indexer-verified component and UTXO state. This is not independent consensus light-client verification. No partial-delivery refund was submitted at this epoch."
+}

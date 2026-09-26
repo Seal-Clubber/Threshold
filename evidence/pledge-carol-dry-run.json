@@ -1,0 +1,440 @@
+{
+  "finalize": {
+    "transaction_hash": "3d0123a48db80fb84368eb792020f176e3fc18cf464ceacfe82aecc7e8aed52b",
+    "events": [
+      {
+        "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      },
+      {
+        "substate_id": "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+        "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+        "topic": "std.component.updated",
+        "payload": {}
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": 2
+        },
+        "return_type": "U32"
+      }
+    ],
+    "result": {
+      "Accept": {
+        "up_substates": [
+          [
+            "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+            {
+              "substate": {
+                "Vault": {
+                  "resource_container": {
+                    "Stealth": {
+                      "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                      "revealed_amount": "899956489",
+                      "locked_amount": "0"
+                    }
+                  },
+                  "freeze_flags": 0
+                }
+              },
+              "version": 2
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_b63988d39e26602b395472e1f737aef4f459c0dcc54c7f5bdb2d3010e91eb558",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "f4e923a531221ca40cc980ab125fd2b661eb13b0a1badd6db382f1d25633e937",
+                      "encrypted_data": "b593b565a11a0153ed35c7bd783697a117cc8a2c232f0a10144d10dcfffbf447f63bd1ee024dd1497205b0cf89b46788b34e51dc1c458acdb72ce7b24cd08fc52c2e84e58a4c1a71dc496004505ba053",
+                      "minimum_value_promise": 1,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Script": "9553c08d8c82cb5927cabd81f8da4ec803d4862ad1528c7f639ce51a0fdf93ce"
+                    },
+                    "tag": 545380619
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_baa06ecf38709e6276f95931881399c24c8513e0c08f5bd1abc5fefd1b33b94a",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "1e37356ce57da16195a79d8e0b1e1dadc22ec9b33fc2c2a1cccdf6dc869d552b",
+                      "encrypted_data": "91f4102577a6304623a626c50ba5e721d728a4a3e3df7259244f541f54c0d7e1fc2b0248ecbfe64ff8d20b675440e0ec1a78edee6a412407f5e6d8289f8265b9b5ae4554161ad47419ba8cd9801ae92b",
+                      "minimum_value_promise": 1,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Script": "9553c08d8c82cb5927cabd81f8da4ec803d4862ad1528c7f639ce51a0fdf93ce"
+                    },
+                    "tag": 1429829790
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_283a4e9b6e19400518c1a04b8e3989eeaf3bd10f4d8ae186988e1c7ff3f70a2f",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "1e69f2bc080b14fb6c1046dae5b93715025535c7da3d39ae4201c9507c131c76",
+                      "encrypted_data": "eff66b6a12c78ae3f460c98b9458266244f3a617262a4e64e27f03435f86d01b35f7cec026ed317f147d9d478bd6ab86eb6bdd2ba7008e09c1eb243c699069dfcb7f63742e4ee4893a05fb25af1148e3",
+                      "minimum_value_promise": 1,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Script": "9553c08d8c82cb5927cabd81f8da4ec803d4862ad1528c7f639ce51a0fdf93ce"
+                    },
+                    "tag": 2810518880
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+            {
+              "substate": {
+                "Component": {
+                  "header": {
+                    "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+                    "owner_rule": "None",
+                    "access_rules": {
+                      "method_access": {},
+                      "default": "AllowAll"
+                    },
+                    "entity_id": "82"
+                  },
+                  "body": {
+                    "state": [
+                      [
+                        1,
+                        {
+                          "@cbor": "bytes",
+                          "hex": "6c1d16e2c676750109ab4e916d88021479364a7d5e9242f1513d5a1964506522"
+                        },
+                        {
+                          "@cbor": "tag",
+                          "tag": 131,
+                          "value": {
+                            "@cbor": "bytes",
+                            "hex": "0101010101010101010101010101010101010101010101010101010101010101"
+                          }
+                        },
+                        11451,
+                        {
+                          "@cbor": "bytes",
+                          "hex": "62f8aa90dde1849a3cfe5569d3f20e30dddc158a346c4268cb4270f2256d653f"
+                        },
+                        [
+                          [
+                            0,
+                            12000000,
+                            8000000,
+                            {
+                              "@cbor": "bytes",
+                              "hex": "3078797bdda21ded0ca8a86ea875d816b230ad3cfefe6d58f8d5535bbb798709"
+                            },
+                            [],
+                            0,
+                            11452,
+                            true
+                          ],
+                          [
+                            0,
+                            24000000,
+                            16000000,
+                            {
+                              "@cbor": "bytes",
+                              "hex": "3078797bdda21ded0ca8a86ea875d816b230ad3cfefe6d58f8d5535bbb798709"
+                            },
+                            [
+                              {
+                                "@cbor": "bytes",
+                                "hex": "5c68b83fed663ecf2e932315377fc9326655bdb512ee0c020cc870f426dc3161"
+                              },
+                              {
+                                "@cbor": "bytes",
+                                "hex": "5a791f0c49b683aca5dcc0655a673ae01101928fe251285a6bf2ddae850cf77d"
+                              }
+                            ],
+                            2,
+                            11453,
+                            false
+                          ],
+                          [
+                            1,
+                            24000000,
+                            16000000,
+                            {
+                              "@cbor": "bytes",
+                              "hex": "3078797bdda21ded0ca8a86ea875d816b230ad3cfefe6d58f8d5535bbb798709"
+                            },
+                            [
+                              {
+                                "@cbor": "bytes",
+                                "hex": "5c68b83fed663ecf2e932315377fc9326655bdb512ee0c020cc870f426dc3161"
+                              },
+                              {
+                                "@cbor": "bytes",
+                                "hex": "5a791f0c49b683aca5dcc0655a673ae01101928fe251285a6bf2ddae850cf77d"
+                              }
+                            ],
+                            2,
+                            11454,
+                            false
+                          ]
+                        ]
+                      ],
+                      [
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "5c68b83fed663ecf2e932315377fc9326655bdb512ee0c020cc870f426dc3161"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "f4295b6e66a90aed918cdc2d9215378a5e6e00ecade12a71bb3818a05f910272"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "2a6a5eee91c51c9e02a4dd1ca0c3e9b2055b6cecb3fec0d0258bbc04e4e0e13b"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "02ad07d8bbfd0c011bdc735f59dc6b2d392ae90d6abb50b97ba485b81bae7d0a"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "5a791f0c49b683aca5dcc0655a673ae01101928fe251285a6bf2ddae850cf77d"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "048a8f9a9537226a7bd6daa87ea87787ce7477ee2787a9833f1f2863d0a27c24"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "5a6b02cf4b9d3e4d481fbbf8fe290f78d8b186c4d685ee0bd9ce5c05bd6bce11"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "fab2788949f161f5f19b1fcb52cfef3fc6c52653ceb3fd9cdddf62b0b0eebc7a"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "24439414920454543cac1b8cbc23612999c3afa65cedbe33e87e423cb9d63625"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "b63988d39e26602b395472e1f737aef4f459c0dcc54c7f5bdb2d3010e91eb558"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "baa06ecf38709e6276f95931881399c24c8513e0c08f5bd1abc5fefd1b33b94a"
+                            },
+                            {
+                              "@cbor": "bytes",
+                              "hex": "283a4e9b6e19400518c1a04b8e3989eeaf3bd10f4d8ae186988e1c7ff3f70a2f"
+                            }
+                          ],
+                          false
+                        ]
+                      ],
+                      [],
+                      false,
+                      0,
+                      [
+                        [],
+                        [
+                          null,
+                          null
+                        ],
+                        [
+                          null,
+                          null
+                        ]
+                      ]
+                    ]
+                  }
+                }
+              },
+              "version": 3
+            }
+          ],
+          [
+            "txreceipt_3d0123a48db80fb84368eb792020f176e3fc18cf464ceacfe82aecc7e8aed52b",
+            {
+              "substate": {
+                "TransactionReceipt": {
+                  "outcome": "Commit",
+                  "diff_summary": {
+                    "upped": [
+                      {
+                        "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+                        "version": 2,
+                        "value_hash": "ef942cc1c1883cf5ecc8be58ec1420f05bed5192902690c738d870e75fb6b9dc"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_b63988d39e26602b395472e1f737aef4f459c0dcc54c7f5bdb2d3010e91eb558",
+                        "version": 0,
+                        "value_hash": "5a1a577f27f832aefb6f582202f431228043c4b7054fb98ff2724e31429365d0"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_baa06ecf38709e6276f95931881399c24c8513e0c08f5bd1abc5fefd1b33b94a",
+                        "version": 0,
+                        "value_hash": "4088714f96cd2d4d38a3b0f6de6e6e90f988c8d0e6b3c211594e1256f3b02b53"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_283a4e9b6e19400518c1a04b8e3989eeaf3bd10f4d8ae186988e1c7ff3f70a2f",
+                        "version": 0,
+                        "value_hash": "ecca10fe59abc9edb525e9d2a2f1f9a921d9369c24d0c8b4256448a7ed28f9a3"
+                      },
+                      {
+                        "substate_id": "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+                        "version": 3,
+                        "value_hash": "417dcef49258af703fe15d327bff1b26b58608deea6d66835ebf7eaa538d59d3"
+                      }
+                    ]
+                  },
+                  "fee_withdrawals": [],
+                  "events": [
+                    {
+                      "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.pay_fee",
+                      "payload": {
+                        "amount": "5000000"
+                      }
+                    },
+                    {
+                      "substate_id": "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+                      "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+                      "topic": "std.component.updated",
+                      "payload": {}
+                    }
+                  ],
+                  "fee_receipt": {
+                    "total_fee_payment": 5000000,
+                    "total_fees_paid": 24782,
+                    "total_fee_overcharge": 0,
+                    "cost_breakdown": {
+                      "breakdown": {
+                        "RuntimeCall": 14,
+                        "Storage": 2365,
+                        "TransactionWeight": 569,
+                        "TemplateLoad": 1010,
+                        "SubstateCreate": 100,
+                        "WasmExecution": 185,
+                        "NativeExecution": 20539
+                      }
+                    },
+                    "exhaust_burn": 1239
+                  },
+                  "epoch": 11432,
+                  "intent_commitment": "bb27aca20d43b7f75b6a5fbaa596dfa29175db7178e4eaf55b5358a7c4a76855"
+                }
+              },
+              "version": 0
+            }
+          ]
+        ],
+        "down_substates": [
+          [
+            "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+            1
+          ],
+          [
+            "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+            2
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_0e4e1780406d82e827d56bf6ad29239c38c852a139ada7bd5bb7c2d0c683944e",
+            0
+          ]
+        ],
+        "fee_withdrawals": []
+      }
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 24782,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 14,
+          "Storage": 2365,
+          "TransactionWeight": 569,
+          "TemplateLoad": 1010,
+          "SubstateCreate": 100,
+          "WasmExecution": 185,
+          "NativeExecution": 20539
+        }
+      },
+      "exhaust_burn": 1239
+    },
+    "total_fees_required": 24782
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 19175845
+  },
+  "execute_epoch": 11432,
+  "wasm_execution_points": 185253,
+  "native_execution_points": 20539032
+}

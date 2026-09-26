@@ -1,0 +1,61 @@
+{
+  "transaction_id": "add73a073c7eba7271060b2079156f6ba545d4b02acfa555263747c9d6e88c87",
+  "receipt": {
+    "outcome": "Commit",
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+          "version": 3,
+          "value_hash": "df22abd5f128c229aac1ca2086d41b8a6ff5a00d32d62a4f1001906430111fd6"
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_ea7aa808e3962733bab2aa783ec288ab7ce6b2a40ff81b31cb6cbe7363164743",
+          "version": 0,
+          "value_hash": "0f85ae8134de52fced363192526a421fcc4d3d27b0cfc423c0d59337c92e789b"
+        },
+        {
+          "substate_id": "component_0398bdd0737ffafed51b7a4befd56b5cb5600020c3ccac370ae625c706ce8109",
+          "version": 6,
+          "value_hash": "2385859ef235d6dcdf419cb57533d8de3f20ad5aea415ce46dd3f4cb0782a9c2"
+        }
+      ]
+    },
+    "fee_withdrawals": [],
+    "events": [
+      {
+        "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      },
+      {
+        "substate_id": "component_0398bdd0737ffafed51b7a4befd56b5cb5600020c3ccac370ae625c706ce8109",
+        "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+        "topic": "std.component.updated",
+        "payload": {}
+      }
+    ],
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 11629,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 13,
+          "Storage": 1437,
+          "TransactionWeight": 436,
+          "TemplateLoad": 1010,
+          "SubstateCreate": 50,
+          "WasmExecution": 144,
+          "NativeExecution": 8539
+        }
+      },
+      "exhaust_burn": 581
+    },
+    "epoch": 11464,
+    "intent_commitment": "3be360e58fc11944f56ee0f0552baca2c5eddfac59ded4985bcd02dc052f5c8d"
+  }
+}

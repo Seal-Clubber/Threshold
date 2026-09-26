@@ -1,0 +1,273 @@
+{
+  "finalize": {
+    "transaction_hash": "107e11faf1a7654dc848ac21e6d2009702df9e83d71b0d4b6a5fee9cf44966bf",
+    "events": [
+      {
+        "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      },
+      {
+        "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.withdraw",
+        "payload": {
+          "amount": "100000000"
+        }
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [
+              0
+            ],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": {
+            "@cbor": "tag",
+            "tag": 133,
+            "value": 0
+          }
+        },
+        "return_type": {
+          "Other": {
+            "name": "Bucket"
+          }
+        }
+      },
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": null
+        },
+        "return_type": "Unit"
+      },
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": null
+        },
+        "return_type": "Unit"
+      }
+    ],
+    "result": {
+      "Accept": {
+        "up_substates": [
+          [
+            "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+            {
+              "substate": {
+                "Vault": {
+                  "resource_container": {
+                    "Stealth": {
+                      "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                      "revealed_amount": "899981271",
+                      "locked_amount": "0"
+                    }
+                  },
+                  "freeze_flags": 0
+                }
+              },
+              "version": 1
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_d24e7dafbdb69a8f7e268e7bc768a2763986c4d82b1dd2a9f380c4d938596245",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "c2d2126c930631fa07957cd029472c91222d041d6668043c94c209b86e899b3e",
+                      "encrypted_data": "43145cab742e9311b934405719bfcfbcbc259014cf7973e3355d599ce33d2c962e2042ca8443c40c9717571302f8afa31dd72064af73929798570f8cd3b493a03ac434ec125ffd9a8e9ab3c9eba9ff46",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "2ad4db560c72b173dea6759b3aef210af461b2de8c122ad96404791b9b1e2021"
+                    },
+                    "tag": 3017218459
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_ec21948dca78d045e1d38f8f2a51330c0d577c1d824a373a022163bf72c6b870",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "26f333922a858842ff3614b4127467219f45245e159088ba3edf16aab644dc55",
+                      "encrypted_data": "c687a9219237a2020e159606dc337ce72b3e033f43ba632151164831e5b9bf4e27c286a193640b43e15994552321f06002cfd60c096228cdec178190e64be3aa4cbffe8ac311315b902705a3ced55a65",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "b61d4f1f613c83bd2a453382871c51c2828308ccec3f480cda07cb35e865733d"
+                    },
+                    "tag": 1641010786
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "txreceipt_107e11faf1a7654dc848ac21e6d2009702df9e83d71b0d4b6a5fee9cf44966bf",
+            {
+              "substate": {
+                "TransactionReceipt": {
+                  "outcome": "Commit",
+                  "diff_summary": {
+                    "upped": [
+                      {
+                        "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+                        "version": 1,
+                        "value_hash": "dad979ca6420d58ab6a95a29c37c8e5de0ac21b4c39c7b728aafacbb24e09a9d"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_d24e7dafbdb69a8f7e268e7bc768a2763986c4d82b1dd2a9f380c4d938596245",
+                        "version": 0,
+                        "value_hash": "c06e1c7e436538af7b20f5bfeae96166c900f702494573897525b930b1b5e198"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_ec21948dca78d045e1d38f8f2a51330c0d577c1d824a373a022163bf72c6b870",
+                        "version": 0,
+                        "value_hash": "8d0b0cb2f96639560b5416837e865b40c37da6366c31e0b471554b5d1f7bc9f9"
+                      }
+                    ]
+                  },
+                  "fee_withdrawals": [],
+                  "events": [
+                    {
+                      "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.pay_fee",
+                      "payload": {
+                        "amount": "5000000"
+                      }
+                    },
+                    {
+                      "substate_id": "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.withdraw",
+                      "payload": {
+                        "amount": "100000000"
+                      }
+                    }
+                  ],
+                  "fee_receipt": {
+                    "total_fee_payment": 5000000,
+                    "total_fees_paid": 15957,
+                    "total_fee_overcharge": 0,
+                    "cost_breakdown": {
+                      "breakdown": {
+                        "RuntimeCall": 13,
+                        "Storage": 1133,
+                        "TransactionWeight": 210,
+                        "SubstateCreate": 75,
+                        "WasmExecution": 34,
+                        "NativeExecution": 14492
+                      }
+                    },
+                    "exhaust_burn": 797
+                  },
+                  "epoch": 11441,
+                  "intent_commitment": "a0251fb95ef5b948ec1fb57768f4f792a7e2b51e62fecd5354f58582ef8169fe"
+                }
+              },
+              "version": 0
+            }
+          ]
+        ],
+        "down_substates": [
+          [
+            "vault_1d2f950d9fe46525aec1d85e1a20722cf54b90e6bd01a03b7a296da83022e580",
+            0
+          ]
+        ],
+        "fee_withdrawals": []
+      }
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 15957,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 13,
+          "Storage": 1133,
+          "TransactionWeight": 210,
+          "SubstateCreate": 75,
+          "WasmExecution": 34,
+          "NativeExecution": 14492
+        }
+      },
+      "exhaust_burn": 797
+    },
+    "total_fees_required": 15957
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 10634987
+  },
+  "execute_epoch": 11441,
+  "wasm_execution_points": 34206,
+  "native_execution_points": 14492688
+}

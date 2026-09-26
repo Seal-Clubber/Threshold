@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-09-25T02:45:57.382Z",
+  "network": "esmeralda",
+  "epoch": 11442,
+  "component": "component_0398bdd0737ffafed51b7a4befd56b5cb5600020c3ccac370ae625c706ce8109",
+  "verifiedByIndexer": true,
+  "state": {
+    "fundingDeadline": 11443,
+    "stages": [
+      {
+        "index": 0,
+        "leg": 0,
+        "community": 3000000,
+        "sponsor": 2000000,
+        "deadline": 11444,
+        "upfront": true,
+        "quorum": 0,
+        "voteCount": 0
+      },
+      {
+        "index": 1,
+        "leg": 1,
+        "community": 3000000,
+        "sponsor": 2000000,
+        "deadline": 11445,
+        "upfront": false,
+        "quorum": 1,
+        "voteCount": 0
+      }
+    ],
+    "pledgeCount": 2,
+    "selectedCount": 2,
+    "active": true,
+    "nextStage": 1,
+    "refundedCount": 0
+  }
+}

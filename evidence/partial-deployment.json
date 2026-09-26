@@ -1,0 +1,13 @@
+{
+  "community_budget_microtari": 6000000,
+  "component": "component_0398bdd0737ffafed51b7a4befd56b5cb5600020c3ccac370ae625c706ce8109",
+  "funding_deadline": 11443,
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "network": "esmeralda",
+  "partial_refund_epoch": 11445,
+  "remaining_refund_microtari": 5000000,
+  "sponsor_budget_microtari": 4000000,
+  "template": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+  "upfront_deadline": 11444,
+  "upfront_payment_microtari": 5000000
+}

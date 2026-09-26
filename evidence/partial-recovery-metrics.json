@@ -1,0 +1,27 @@
+{
+  "network": "esmeralda",
+  "component": "component_0398bdd0737ffafed51b7a4befd56b5cb5600020c3ccac370ae625c706ce8109",
+  "total_refunded_microtari": 5000000,
+  "refunds": [
+    {
+      "owner": "partial-community",
+      "transaction_id": "9f5f4b730ef13f7dfdeadd5d5f54e88a2e1fea4e15d5771c05351a9c40feb19d",
+      "amount_microtari": 3000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 11629,
+      "native_proof_ms": 2029,
+      "encoded_transaction_bytes": 1569
+    },
+    {
+      "owner": "partial-sponsor",
+      "transaction_id": "add73a073c7eba7271060b2079156f6ba545d4b02acfa555263747c9d6e88c87",
+      "amount_microtari": 2000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 11629,
+      "native_proof_ms": 2019,
+      "encoded_transaction_bytes": 1569
+    }
+  ]
+}
