@@ -37,7 +37,9 @@ The 10/90 example passed a local Ootle engine test. The main recorded testnet ca
 | Reviewers | Who checks the work and how many approvals a reviewed milestone needs. Contributors do not all have to vote. |
 | Deadlines | When funding closes and when each milestone must be approved and paid. |
 
-The **Sandbox** on the website lets you explore these choices without changing the bounty demo. It previews campaign terms; it does not create a campaign.
+The **Sandbox** is a separate campaign designer with seven starting points: developer bounties, community projects, exchange integrations, development plus an audit, maintenance, research grants, and a sponsor collective. Edit the budget, funding model, upfront share, milestone weights and recipients, reviewers, approval thresholds, and deadlines. Separate funding controls and an unpaid-balance preview let you explore what happens if funding or delivery stops. You can save a JSON design sketch.
+
+It also explores possibilities beyond v1: sponsor-free funding, multiple sponsors, and larger pledge, stage, and reviewer counts. Each configuration is labelled as within current v1 limits, a sponsor-free PoC, or a future design requiring new implementation and testing. These previews do not establish feasibility or deploy a campaign. Multiple sponsors are represented as an aggregate pool, not individual sponsor commitments. The sketch is not an on-chain terms file. Sandbox settings never change the bounty demo.
 
 <details>
 <summary>Current limits and future flexibility</summary>
@@ -118,6 +120,7 @@ To build and check the static GitHub Pages files:
 ```sh
 node scripts/build-pages.mjs
 node scripts/check-pages.mjs
+node scripts/check-sandbox.mjs
 ```
 
 The result is in `_site/`. The [GitHub Pages guide](docs/github-pages.md) explains deployment. Transaction evidence stays in the repository rather than being loaded by the website.

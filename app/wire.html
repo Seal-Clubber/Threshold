@@ -81,30 +81,51 @@
     </main>
   </div>
   <dialog id="sandbox-dialog" class="sandbox-dialog" aria-labelledby="sandbox-title">
-    <div class="sandbox-head"><span class="sandbox-kicker">SANDBOX</span><button id="sandbox-close" type="button" aria-label="Close sandbox">×</button></div>
-    <h2 id="sandbox-title">Plan your own campaign</h2>
-    <p>Try a budget, payment schedule, and review rules. These settings do not change the bounty demo.</p>
-    <div class="sandbox-presets"><span>STARTING POINTS</span><button type="button" data-sandbox-preset="bounty">Developer bounty</button><button type="button" data-sandbox-preset="tool">Shared tool</button><button type="button" data-sandbox-preset="many">100+ funders</button></div>
+    <div class="sandbox-head"><span class="sandbox-kicker">CAMPAIGN SANDBOX</span><button id="sandbox-close" type="button" aria-label="Close sandbox">×</button></div>
+    <h2 id="sandbox-title">What would you fund?</h2>
+    <p class="sandbox-lead">Design the campaign around your idea. Explore today's funding rules and possibilities for future templates. Everything here is hypothetical and independent of the bounty map.</p>
+    <div class="sandbox-presets" aria-label="Campaign starting points"><button type="button" data-sandbox-preset="bounty">Developer bounty</button><button type="button" data-sandbox-preset="community">Community project</button><button type="button" data-sandbox-preset="exchange">Exchange integration</button><button type="button" data-sandbox-preset="audit">Build + audit</button><button type="button" data-sandbox-preset="maintenance">Maintenance</button><button type="button" data-sandbox-preset="research">Research grant</button><button type="button" data-sandbox-preset="many">Sponsor collective</button></div>
+    <p id="sandbox-preset-description" class="sandbox-preset-description"></p>
     <div class="sandbox-layout">
-      <div class="sandbox-controls">
-        <label class="sandbox-field"><span>Total budget <small>tTARI</small></span><input id="sandbox-budget" type="number" min="1" max="100000" step="1" value="100"></label>
+      <section class="sandbox-controls" aria-labelledby="sandbox-funding-title">
+        <h3 id="sandbox-funding-title"><span>01</span> Shape the funding</h3>
+        <label class="sandbox-field"><span>Campaign name</span><input id="sandbox-name" type="text" maxlength="80" value="A feature the community needs"></label>
+        <label class="sandbox-field"><span>Funding model</span><select id="sandbox-mode"><option value="matched">Community + one sponsor</option><option value="community">Community only · PoC</option><option value="collective">Community + multiple sponsors · future</option></select></label>
+        <label class="sandbox-field"><span>Total budget <small>illustrative tTARI</small></span><input id="sandbox-budget" type="number" min="1" max="1000000" step="1" value="100"></label>
         <label class="sandbox-field"><span>Community share <output id="sandbox-share-value">60%</output></span><input id="sandbox-share" type="range" min="1" max="99" step="1" value="60"></label>
-        <label class="sandbox-field"><span>Upfront after full match <output id="sandbox-upfront-value">10%</output></span><input id="sandbox-upfront" type="range" min="1" max="60" step="1" value="10"></label>
-        <div class="sandbox-pair"><label class="sandbox-field"><span>Milestones</span><input id="sandbox-stages" type="number" min="2" max="12" step="1" value="2"></label><label class="sandbox-field"><span>Pledge records</span><input id="sandbox-pledges" type="number" min="2" max="200" step="1" value="4"></label></div>
-        <div class="sandbox-pair"><label class="sandbox-field"><span>Reviewer keys</span><input id="sandbox-reviewers" type="number" min="1" max="20" step="1" value="2"></label><label class="sandbox-field"><span>Votes needed</span><input id="sandbox-quorum" type="number" min="1" max="20" step="1" value="2"></label></div>
-        <div class="sandbox-pair"><label class="sandbox-field"><span>Funding closes <small>epochs</small></span><input id="sandbox-funding-epochs" type="number" min="1" max="10000" step="1" value="20"></label><label class="sandbox-field"><span>Stage spacing <small>epochs</small></span><input id="sandbox-stage-epochs" type="number" min="1" max="10000" step="1" value="20"></label></div>
-        <details class="sandbox-advanced"><summary>Adjust reviewed stage weights</summary><div id="sandbox-weights"></div></details>
-      </div>
-      <div class="sandbox-preview" aria-live="polite">
-        <div id="sandbox-viability" class="sandbox-viability"></div>
-        <div class="sandbox-summary"><div><span>COMMUNITY</span><strong id="sandbox-community-result">60</strong></div><div><span>SPONSOR</span><strong id="sandbox-sponsor-result">40</strong></div><div><span>FIRST PAYMENT</span><strong id="sandbox-first-result">10</strong></div></div>
-        <label class="sandbox-field sandbox-progress"><span>Try the funding gate <output id="sandbox-progress-value">80% pledged</output></span><input id="sandbox-progress" type="range" min="0" max="100" step="1" value="80"></label><div id="sandbox-gate" class="sandbox-gate"></div>
-        <strong class="sandbox-preview-title">Payment schedule</strong><div id="sandbox-schedule" class="sandbox-schedule"></div>
-        <p class="sandbox-note">V1 needs a sponsor contribution at every stage. Sponsor-free campaigns are not supported yet.</p>
-        <details class="copy-details"><summary>Rules for a real campaign</summary><p>Recipients, sponsor, reviewers, amounts, evidence requirements, and deadlines are fixed before funding. Payments need the recipient’s signature and any required reviewer approvals before the deadline. Refunds require each contributor’s recovery backup and fee funds.</p></details>
-      </div>
+        <div class="sandbox-pair"><label class="sandbox-field"><span>Total pledge records</span><input id="sandbox-pledges" type="number" min="1" max="10000" value="4"></label><label class="sandbox-field"><span>Sponsors</span><input id="sandbox-sponsors" type="number" min="2" max="100" value="3" disabled></label></div>
+        <label class="sandbox-field"><span>Upfront after full funding <output id="sandbox-upfront-value">10%</output></span><input id="sandbox-upfront" type="range" min="0" max="100" step="1" value="10"></label>
+        <label class="sandbox-field"><span>Reviewed milestones <small>after any upfront payment</small></span><input id="sandbox-stages" type="number" min="1" max="24" step="1" value="1"></label>
+        <div class="sandbox-pair"><label class="sandbox-field"><span>Funding closes <small>epochs</small></span><input id="sandbox-funding-epochs" type="number" min="1" max="10000" value="20"></label><label class="sandbox-field"><span>Stage spacing <small>epochs</small></span><input id="sandbox-stage-epochs" type="number" min="1" max="10000" value="20"></label></div>
+        <p class="sandbox-note">Deadlines are offsets from creation, not calendar dates. Every stage is funded together. Larger numbers are design inputs, not demonstrated capacity.</p>
+      </section>
+      <section class="sandbox-milestones" aria-labelledby="sandbox-milestones-title">
+        <h3 id="sandbox-milestones-title"><span>02</span> Define the work</h3>
+        <p>Name each deliverable and recipient. Relative weights divide the reviewed budget. Each stage has its own review group.</p>
+        <label id="sandbox-start-recipient-field" class="sandbox-field"><span>Upfront recipient</span><input id="sandbox-start-recipient" type="text" maxlength="60" value="Developer"></label>
+        <div id="sandbox-editors"></div>
+        <p class="sandbox-note">Names are labels, not wallet addresses. Real campaigns bind recipients and reviewers to keys before funding. Different keys do not prove independent people.</p>
+      </section>
+      <section class="sandbox-preview" aria-labelledby="sandbox-outcome-title">
+        <h3 id="sandbox-outcome-title"><span>03</span> Explore the outcome</h3>
+        <div id="sandbox-viability" class="sandbox-viability" role="status"></div>
+        <ul id="sandbox-support-notes" class="sandbox-support-notes"></ul>
+        <div class="sandbox-summary"><div><span>COMMUNITY</span><strong id="sandbox-community-result"></strong></div><div><span>SPONSORS</span><strong id="sandbox-sponsor-result"></strong></div><div><span>FIRST PAYMENT</span><strong id="sandbox-first-result"></strong></div></div>
+        <strong class="sandbox-preview-title">Try funding each side</strong>
+        <label class="sandbox-field"><span>Community pledged <output id="sandbox-progress-value"></output></span><input id="sandbox-progress" type="range" min="0" max="100" value="80"></label>
+        <label id="sandbox-sponsor-progress-field" class="sandbox-field"><span>Sponsor pool pledged <output id="sandbox-sponsor-progress-value"></output></span><input id="sandbox-sponsor-progress" type="range" min="0" max="100" value="100"></label>
+        <div id="sandbox-gate" class="sandbox-gate" role="status"></div>
+        <details class="sandbox-advanced sandbox-outcome-details"><summary>What if work stops?</summary>
+          <p>Assume the displayed stages were paid in order after valid approval. Explore what remains when the next stage misses its deadline.</p>
+          <label class="sandbox-field"><span>Stages already paid <output id="sandbox-paid-value"></output></span><input id="sandbox-paid" type="range" min="0" max="2" value="0"></label>
+          <label class="sandbox-check"><input id="sandbox-expired" type="checkbox"> Relevant funding or delivery deadline has passed</label>
+          <div id="sandbox-recovery" class="sandbox-gate" role="status"></div>
+        </details>
+        <strong class="sandbox-preview-title">Your payment schedule</strong><div id="sandbox-schedule" class="sandbox-schedule"></div>
+        <p class="sandbox-note">No deployment or transactions. Real payments require valid proofs, recipient checks and signatures. Recovery needs each owner's backup, fee funds and network access. Released money cannot be recovered.</p>
+      </section>
     </div>
-    <div class="sandbox-actions"><button id="sandbox-reset" type="button">Reset example</button><button id="sandbox-done" type="button">Done</button></div>
+    <div class="sandbox-actions"><span id="sandbox-export-status" role="status"></span><button id="sandbox-reset" type="button">Reset example</button><button id="sandbox-export" type="button">Save campaign sketch</button><button id="sandbox-done" type="button">Done</button></div>
   </dialog>
   <dialog id="usecases-dialog" class="sandbox-dialog usecases-dialog" aria-labelledby="usecases-title">
     <div class="sandbox-head"><span class="sandbox-kicker">USE CASES</span><button id="usecases-close" type="button" aria-label="Close use cases">×</button></div>
