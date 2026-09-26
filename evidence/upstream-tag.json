@@ -1,0 +1,10 @@
+{
+  "ref": "refs/tags/v0.41.2",
+  "node_id": "REF_kwDOHzZYurFyZWZzL3RhZ3MvdjAuNDEuMg",
+  "url": "https://api.github.com/repos/tari-project/tari-ootle/git/refs/tags/v0.41.2",
+  "object": {
+    "sha": "1c94a8ec7d52767dfc182c2fcf69e0a203a1aec1",
+    "type": "tag",
+    "url": "https://api.github.com/repos/tari-project/tari-ootle/git/tags/1c94a8ec7d52767dfc182c2fcf69e0a203a1aec1"
+  }
+}

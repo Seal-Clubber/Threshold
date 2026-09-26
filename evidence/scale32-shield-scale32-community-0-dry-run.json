@@ -1,0 +1,665 @@
+{
+  "finalize": {
+    "transaction_hash": "7078967cf20737f3a9c662e578d88d406adaabcbd0c14727203efb6057aa3d4e",
+    "events": [
+      {
+        "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      },
+      {
+        "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.withdraw",
+        "payload": {
+          "amount": "100000000"
+        }
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [
+              0
+            ],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": {
+            "@cbor": "tag",
+            "tag": 133,
+            "value": 0
+          }
+        },
+        "return_type": {
+          "Other": {
+            "name": "Bucket"
+          }
+        }
+      },
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": null
+        },
+        "return_type": "Unit"
+      },
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": null
+        },
+        "return_type": "Unit"
+      }
+    ],
+    "result": {
+      "Accept": {
+        "up_substates": [
+          [
+            "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+            {
+              "substate": {
+                "Vault": {
+                  "resource_container": {
+                    "Stealth": {
+                      "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                      "revealed_amount": "899892973",
+                      "locked_amount": "0"
+                    }
+                  },
+                  "freeze_flags": 0
+                }
+              },
+              "version": 1
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_fae79f4459140413368ed072fcffdebf334b84976544929321a98b383a6f5944",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "9a004391d06716bc428518d9d94a4e2eb4c17b6bd0fb92ee525b25f9230caa7f",
+                      "encrypted_data": "e7574a13c199f8def945bc3654718811bfa853ee748ab8f1c57e666d46fbd4fc5e0276ab99fab7b0ce46fdd251b24c13cfda5342ce5833a3e22b61023ff903983963989059aecaf221f4b4685d8ae579",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "2c5b2e9a028a4eff8954a1f8831b0e577ee65c819103a03e017028ba5b224164"
+                    },
+                    "tag": 845851132
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_88661239bdabfd554ca1dadd882808867e30b720b12870936ebf232f56206759",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "5ce6d66bb9902976201ee1f90a7d5efa7dd35fe13bcac0b95f48dc9e6dfa3f6c",
+                      "encrypted_data": "36af50ab9abb30c33ca6a515fdba645458b8fd3577232f63e5b43725e577c5bab0b050e31003c84f3c41c509901af348f1097e1d4d6d975b19e88dc1a1888e1968ca6ff6cc6d49c4c18bf17d14de2b72",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "74acd2a447c1402d3771ea51044155cb819c3bd6ef5275f0b5a966b7ebdb171b"
+                    },
+                    "tag": 1100911395
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_aed7d19f0cc631d7ddd4b920cbb55a68a9dcda810058cee5681c16c423061c3a",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "eeb4211597bb3b0be794c603dd4f8cdfe5a40bd8dfcb4c69ecb88a37bae77767",
+                      "encrypted_data": "6956c9f65bc2a71c60bd565cd696604b0c6cc8936e98b64d335623f1d58aeb94feb7fe8b0eb9ec931c713a67e885841d322316ba97c14b5e6378856c573212a92b7729f38d3c0fd97e1a03da7e3a14a6",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "48a020fd5bec42f88d3cb5d88d964da61c5bb6fe0525a1b32ee1d8bd7ecf2d49"
+                    },
+                    "tag": 851013467
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_f6c0c305ab73a2eb021cab31617b3b95de6b7ba7593f05a587aed83d8fea9503",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "bc09e41cc42edfceac81e09b99614abe4a6931289b0329d07c1bb6171e7f7305",
+                      "encrypted_data": "ce344fc6f3eb409aadd25423813177217d0662ab6ebfb48ecf86970d422f7443bb9a8aabea4c468ee85f3e8dde16d3f5cb6a255d3c5fd74e4c055fcdcc55908f3d8a5fffb31e4035c57f2c269601d490",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "c28f90c7b1c9f431103c80c0f97296321a2c14502c0813574b346157c29c1576"
+                    },
+                    "tag": 1284368733
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_e8e3e3d9e622304b8d2278d5c83527f5537e6dafea942b88bc6d2b80e95f2e2b",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "e48a4301c7db4d4343dfafced856fb5350bdabeb9ff55a6f2114a55a4636df77",
+                      "encrypted_data": "bc7e23c5b8302546842854cad47e005f65aad0336b71cba5ea695019d5daeb75e5a1e803346f0f9f42346d8cb9b09e3872b97e2ddc7379332cbf8ae3de0f02bf8cb03dbaa802a219a57ae40061e33022",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "dcb0bdf6417f0acbaa4e877731753c5550ce8da62e62527c364c2f0ae7a52025"
+                    },
+                    "tag": 3991238144
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_2206ef32a0b04225085b4efcd6ee394cb212e9fff9758286ff766b6639f55f32",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "0c70b8f2ebd9dd71d0aa9b0f5680f1c055b3dd75f75c42671104e91f93b9202c",
+                      "encrypted_data": "5e8c480c91179f1116fb56ab6bd1f9f432f15f672dd2c1d6e0bf95df8e918e1d6b583e5e678a7e7e40f8215422dab58e1cdbae9554867f110beaa72cc2ddce565d82b752a33614ba4e55733f774e47f9",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "02f92a84084eb3657148a578e51db506ffcbc26f3cd697cd0ab7d2fe8191cc07"
+                    },
+                    "tag": 2264800415
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_16fc81cebab00df598623b517afb1a89561423a01b496b03ac1de297ba7a4514",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "16a056dc5f6356cbaee5435ef70ac5cfe524faa5608b4a3b3bf556586a7a5c7a",
+                      "encrypted_data": "040369f4a8a9c3df45552a654ccacdd26d5b3054248c406cf39ad6ead37d9ec7f3aad098df2b2823b80da59680b15b2fabc987253291a02ebf0ab86268e6ff63acf47d031bc05cf6aa0d21bacf87f435",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "4ef7a40d4db6040d4eaa2e884d6035659fa9ca6b0e17af17ec7edb9b9b587d6c"
+                    },
+                    "tag": 3162836292
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_c6351af670ba0efc1d25b7074f31cadc84ea441693b0c2e433ced68fa7be8b60",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "56d750213f08299dbe22dbf6fbdd5c0e170ffa870cdd68ba72f01dd62d2c2b5c",
+                      "encrypted_data": "6184e719449763ce085af0a9587ffa0086199e2cc6e4a810b99c35ee01cbf6ac3ffdd9249b8e75bb341b1092405d4ba635296c9f01e31f73f76b7c7ba1ec05d9ee0467fa6448d84b8a9aca897c3cbdbc",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "5e7cdd924a643e8538f1f94a2519ef00672ca3664e5db8d90f2c48713f442d45"
+                    },
+                    "tag": 1865071777
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_12f77861d89ee32120adeca0b0a806a8c92bdb74a5d0f5ddc3f4f8d9ffdb5b22",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "60f1f908c8219cd8d3cd0ba053e35e6129270cd673da907206a3082e30b6f101",
+                      "encrypted_data": "40007932859cf4ee17cb85b8074802ca7c698cc863c465c870523cd607886e36a94785ee1c1c8fd5fe8fac5169b37869e69b657c021d792a4286e1241c9345d09eaa28e1c7534e2aee550c9948b7e125",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "fecd5a388557d5cec6e28e452d676c3ac67ca9e6e8076ad4ecc9adc07a7a4d5b"
+                    },
+                    "tag": 1180052088
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_dc9d668c4638e75cb28d3ad88c8810e145662acaa2c9a857641b39f936a29205",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "ca12c28619609fb09645cc0cd72da3c91e899161f7d30dd7f658b8227d8b5c5a",
+                      "encrypted_data": "cd40faba2a115f1cfc39b111451a28da01c699fc0f41cd855771dd093a6ac46cd3b0e68580c2baa04ecd74663c4c5e00eac0a7b68ae9475754fa8e1c97ad01b855449dc0368b0b9c9866d3d702067fad",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "f85ada448937f8014a718aa13eb487594f90b4d45bc5f69badfc8869c078cf2b"
+                    },
+                    "tag": 2728785211
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_487ecbf70619c2433200f0819368e6e265d31c989fee8317558d7c8b0a682042",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "5c0056ec67f2c84bae7af1c0f95a92637a9b8fe0f3272cba64c38481762d012a",
+                      "encrypted_data": "9788923ea535007a0a0aff4c6e0795d91076dcef355324a492a8fd7aeec6305808d390dbc0570db74d991cbfee9abf7b30c91801f0ce3dc5c5c67446d45d1122f5851522fae7a6f3b870aeed5ac16e6c",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "c65910ca9f9c1d988d0def9e737ccadcd50a54d9e8b80bd21ff6f5267dc33f45"
+                    },
+                    "tag": 36912028
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_3c365f6a2aa15d6ba62dab1df6807f1720b8481eca1e281899b15b4e41305348",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "eead7f01abadee1dabb39ef77706a8129b49f7de0e9488b0109c5da57f197247",
+                      "encrypted_data": "a639af499d043a5d6d1fc29a72daf5c2e28296f036782795e9e6e33dd41e7389e0d393888c5b9cc6829ac93774d2ddef1247b50a3356a5ab6bf49121fc9f2574512b9e886edaafb8abd80b17e3545f0f",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "8ccff6514d6c6340a4e61cf5f9154871d6400e9ce420cc1794d4092a5ccc3830"
+                    },
+                    "tag": 1153027343
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_286568488c23b041fc9fdf6fb7a6b6852e7d15ce5d0d6624646ca6eab36b9735",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "7ea3fb6130fe941ec001d24ce68893569a5960b241f983945d2301d418e5a17b",
+                      "encrypted_data": "ccf36b94d38587c13b64ca4ca6e433ffabf40a2b6b625e94b4a02dce7a322d1ff07a2ec008102db88348283050690959b632fd890d9eef8d6bb07dc8833d7e35872992af190d3b829c12d1b3e7ce4854",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "c80e9b91c5210fdcc569de03101e6bd97bbed5ee92acbbd0af2aede456487311"
+                    },
+                    "tag": 1726623906
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_50db94ad7178e04e21597c4d79ae1e2d0e609e7d6e5950efcee36a931d4eb201",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "acdf44dd2c23173a52d164504a320d04b3d9021aa57f7d14ce88cc8070cd7f40",
+                      "encrypted_data": "2173ecfc11487f3b9ef8918ace88739e9eef03c04c78c1bd3e3f1af55ec4d1c47b7b7219338586cfc8484dcf641088bdff37aecab170fd1cbbaa58914fcfcc52a104b29a2bbd609931cd477d2e6fc899",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "2036de6570834a0ac5ce2409ac244429cd9e0348a0cebaeabfcdf29b584af813"
+                    },
+                    "tag": 4215935984
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_7e150f36e6598ec2a9cf605ddda379fdb8f4bbd1b4482b633fa08ed66aae7b19",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "885cac04cf82745696bd2c4f54a2225c4834bc153fe71d3b75cd748f1e23724b",
+                      "encrypted_data": "5d8d44fb9a4df229deae7d25926c0a0beb7f71a7c41960f33b186f562d8a21454b8f77031a299dddf716c83a35974d6f732c8e2769f6670ef45a67a159da16e7e39534f77a7207175d3a92936daf01ff",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "ae1537a7b0293a1903938ff648d2276bbf8ebf086e1e1da05c6b060df4f8347b"
+                    },
+                    "tag": 1111409839
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_4a5617869319dc678998ad20f74aaf14d4348d2c3d8c7f319a2158a900882c5f",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "3cda08249e18228898770274111ebaffd1d76b09330de35678dca71974dcfc50",
+                      "encrypted_data": "bae3b09974fe99aa441c151cc77d7910027f5949931695d9055c4ec4b2020ac9eed0cf518129874af16d53fcb832edec750b22465c421c1ea81628f628120e6eb4d0018bceeecc41080bea88ebd401b4",
+                      "minimum_value_promise": 0,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Key": "5663ceaa0675f4e80a0a8834129225dba74dc6d846e7d9dee71a84e0ea47a029"
+                    },
+                    "tag": 1296003795
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "txreceipt_7078967cf20737f3a9c662e578d88d406adaabcbd0c14727203efb6057aa3d4e",
+            {
+              "substate": {
+                "TransactionReceipt": {
+                  "outcome": "Commit",
+                  "diff_summary": {
+                    "upped": [
+                      {
+                        "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+                        "version": 1,
+                        "value_hash": "d1d20a0e03491eea77561156f8e6b632286c5afe46dd1ea96dce3e47cc77d37e"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_fae79f4459140413368ed072fcffdebf334b84976544929321a98b383a6f5944",
+                        "version": 0,
+                        "value_hash": "f7989a130a643ad0c41a3c8a3a69b1e72d528e7e2eff0e5908323ccf028e13ff"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_88661239bdabfd554ca1dadd882808867e30b720b12870936ebf232f56206759",
+                        "version": 0,
+                        "value_hash": "9552ce3d2d1521c95eb98fa6cd0a577328414b5ab84e0fd4189a9daf12e9aec6"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_aed7d19f0cc631d7ddd4b920cbb55a68a9dcda810058cee5681c16c423061c3a",
+                        "version": 0,
+                        "value_hash": "adda2c61ae028da17bff2ff5c88f990b308dbbfdb1718efa70738ed541319466"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_f6c0c305ab73a2eb021cab31617b3b95de6b7ba7593f05a587aed83d8fea9503",
+                        "version": 0,
+                        "value_hash": "6e1fa576bc7504bfb345e38535203f82d99ccb70abf705376fe8f18fdf50cd47"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_e8e3e3d9e622304b8d2278d5c83527f5537e6dafea942b88bc6d2b80e95f2e2b",
+                        "version": 0,
+                        "value_hash": "f15b4cb3bcd6c67675be7d898dae9d8852c0ea77d63b5a7dd728d53ea75229d3"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_2206ef32a0b04225085b4efcd6ee394cb212e9fff9758286ff766b6639f55f32",
+                        "version": 0,
+                        "value_hash": "df53a2e10df30fffd3226cf02ed3fbb9c165c839e17289d6b79aa7b20167d5fa"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_16fc81cebab00df598623b517afb1a89561423a01b496b03ac1de297ba7a4514",
+                        "version": 0,
+                        "value_hash": "3da16c62dae8927c31c629338b5035f9828b1cbf48559e7583abc40060ea7c60"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_c6351af670ba0efc1d25b7074f31cadc84ea441693b0c2e433ced68fa7be8b60",
+                        "version": 0,
+                        "value_hash": "87a91c28c8ed8ad92c5025746b492b144fffcf12d70d0ae3a62cf927f8dfc2a2"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_12f77861d89ee32120adeca0b0a806a8c92bdb74a5d0f5ddc3f4f8d9ffdb5b22",
+                        "version": 0,
+                        "value_hash": "0ea4ff7a77def376bf6d92b1c5f7e679b2be119b4f659b70a578b8ec7f3b907f"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_dc9d668c4638e75cb28d3ad88c8810e145662acaa2c9a857641b39f936a29205",
+                        "version": 0,
+                        "value_hash": "13123f5276fd6f0bbade35dc0e72bea9203506c9cc5d13cbd86b4845baa3b72d"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_487ecbf70619c2433200f0819368e6e265d31c989fee8317558d7c8b0a682042",
+                        "version": 0,
+                        "value_hash": "4bb39f5f7ab44fb60400c935cb409cfe2f75b5098467ea6aa36d8a6003f83ea8"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_3c365f6a2aa15d6ba62dab1df6807f1720b8481eca1e281899b15b4e41305348",
+                        "version": 0,
+                        "value_hash": "4e3ce8cf1856974fc7d4d05f9b5bc7f637ccf7543224e239aff415d085d70d9e"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_286568488c23b041fc9fdf6fb7a6b6852e7d15ce5d0d6624646ca6eab36b9735",
+                        "version": 0,
+                        "value_hash": "e19321031862566edc6bd5bdd8d57cdd400aeed1a7bdf6e55600cc0dad585f34"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_50db94ad7178e04e21597c4d79ae1e2d0e609e7d6e5950efcee36a931d4eb201",
+                        "version": 0,
+                        "value_hash": "17b46fbc5ff109c5bd6588cb445c3740bd6bcbe10d3fd34e34f1716bdb335168"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_7e150f36e6598ec2a9cf605ddda379fdb8f4bbd1b4482b633fa08ed66aae7b19",
+                        "version": 0,
+                        "value_hash": "2c999d83c6f7bd00a30ac15dccb634415534b9b552b689abd53ad2b754afaa46"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_4a5617869319dc678998ad20f74aaf14d4348d2c3d8c7f319a2158a900882c5f",
+                        "version": 0,
+                        "value_hash": "60f118457649d5765270cec206fedcad8b0a569389109398f0248e66aceed75c"
+                      }
+                    ]
+                  },
+                  "fee_withdrawals": [],
+                  "events": [
+                    {
+                      "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.pay_fee",
+                      "payload": {
+                        "amount": "5000000"
+                      }
+                    },
+                    {
+                      "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.withdraw",
+                      "payload": {
+                        "amount": "100000000"
+                      }
+                    }
+                  ],
+                  "fee_receipt": {
+                    "total_fee_payment": 5000000,
+                    "total_fees_paid": 104255,
+                    "total_fee_overcharge": 0,
+                    "cost_breakdown": {
+                      "breakdown": {
+                        "RuntimeCall": 13,
+                        "Storage": 5081,
+                        "TransactionWeight": 210,
+                        "SubstateCreate": 425,
+                        "WasmExecution": 34,
+                        "NativeExecution": 98492
+                      }
+                    },
+                    "exhaust_burn": 5212
+                  },
+                  "epoch": 11466,
+                  "intent_commitment": "5670ec48075829411213c83296e2adb7f8d814ed4cc025dfe1f6a31024eec4d3"
+                }
+              },
+              "version": 0
+            }
+          ]
+        ],
+        "down_substates": [
+          [
+            "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+            0
+          ]
+        ],
+        "fee_withdrawals": []
+      }
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 104255,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 13,
+          "Storage": 5081,
+          "TransactionWeight": 210,
+          "SubstateCreate": 425,
+          "WasmExecution": 34,
+          "NativeExecution": 98492
+        }
+      },
+      "exhaust_burn": 5212
+    },
+    "total_fees_required": 104255
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 34555683
+  },
+  "execute_epoch": 11466,
+  "wasm_execution_points": 34206,
+  "native_execution_points": 98492688
+}

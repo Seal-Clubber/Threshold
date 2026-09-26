@@ -1,0 +1,92 @@
+{
+  "receipt": {
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_ed50866109162d8bcfa330baf915e712965d0535c8c6c5e49107bc4adce4f750",
+          "value_hash": "a8c222d4afbfef90238780ed8e506972b5ab48c7eb7d74df6d6b5ba11e3115e5",
+          "version": 1
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_dcbe1afad8db0fa6ece719710fec8f082ba1a6af7c954aeae50e51b3e7f34c50",
+          "value_hash": "cea8bbd115e662fc26f44bb4977520bd76f511ba6bb04c4c4eea2407d2593b29",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_c04e31f6b84c6549a1f6dda120b54ee941218706ee3562f81332c86e74ace938",
+          "value_hash": "13c00610fb155758e22c08b92a07e7d3d9f79ed235c8f24d545ce2375c7b0285",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_5864981874de3788af7d3a8939feb14799260c6c513717477edcc6ada508f93e",
+          "value_hash": "bcb90feddb55ce795930b5fa8caedfd44789ee516ccc2d71a85c5d627b9b26c4",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_3472d1dc72692cc474e224d2f36ebec00bbf23019789e841c18f2247da26d353",
+          "value_hash": "8e096abcb828b5a6cf972ae4fcefd7f7d3ceacd048b83ddbc51f9e89a429ee2d",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_969617da001d56c00b78313e6eaad5bc047e7c931c2343e04ad426fbf956c662",
+          "value_hash": "cd03f3168bfa89b548fb63c9aee3784628f75c5184aa7f4266b68bd4f529ac00",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_9c73447d26f6daa8d878eb06bc0bc5671b969cdbb2485920e015c4279d8ad67a",
+          "value_hash": "cfa397727e6669790934ec824fe591f38cebe2497ca4b48135d6e40355f378b5",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_d27139aa2b312ad8dc5cb4d7a0f3990c2685e80e2ac599daf94da288b02c6976",
+          "value_hash": "a62cf6e0b00a5defeb6cb3b636e34f385197e8be0fd763a244fa2c986aafa625",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_30ed4b13d8a602778cdea5a4b44c8749ffe9606e66dd099795150d73aefb7859",
+          "value_hash": "113904780ac3e485a0b010eddb6155dd5c4ba8d54503e655b23cc3a7e9303e60",
+          "version": 0
+        }
+      ]
+    },
+    "epoch": 11465,
+    "events": [
+      {
+        "payload": {
+          "amount": "5000000"
+        },
+        "substate_id": "vault_ed50866109162d8bcfa330baf915e712965d0535c8c6c5e49107bc4adce4f750",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee"
+      },
+      {
+        "payload": {
+          "amount": "100000000"
+        },
+        "substate_id": "vault_ed50866109162d8bcfa330baf915e712965d0535c8c6c5e49107bc4adce4f750",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.withdraw"
+      }
+    ],
+    "fee_receipt": {
+      "cost_breakdown": {
+        "breakdown": {
+          "NativeExecution": 50492,
+          "RuntimeCall": 13,
+          "Storage": 2825,
+          "SubstateCreate": 225,
+          "TransactionWeight": 210,
+          "WasmExecution": 34
+        }
+      },
+      "exhaust_burn": 2689,
+      "total_fee_overcharge": 0,
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 53799
+    },
+    "fee_withdrawals": [],
+    "intent_commitment": "46c0bd090f6b841c11a4dac5810cb4f66678ee5a5dc4a4527e25371e3e61a499",
+    "outcome": "Commit"
+  },
+  "transaction_id": "1af9fdbbac9766de9edc378120bfefd16e0c66e6f76d0355b9a8dae5f38adf6a"
+}

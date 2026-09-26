@@ -1,0 +1,132 @@
+{
+  "receipt": {
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+          "value_hash": "d1d20a0e03491eea77561156f8e6b632286c5afe46dd1ea96dce3e47cc77d37e",
+          "version": 1
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_fae79f4459140413368ed072fcffdebf334b84976544929321a98b383a6f5944",
+          "value_hash": "f7989a130a643ad0c41a3c8a3a69b1e72d528e7e2eff0e5908323ccf028e13ff",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_88661239bdabfd554ca1dadd882808867e30b720b12870936ebf232f56206759",
+          "value_hash": "9552ce3d2d1521c95eb98fa6cd0a577328414b5ab84e0fd4189a9daf12e9aec6",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_aed7d19f0cc631d7ddd4b920cbb55a68a9dcda810058cee5681c16c423061c3a",
+          "value_hash": "adda2c61ae028da17bff2ff5c88f990b308dbbfdb1718efa70738ed541319466",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_f6c0c305ab73a2eb021cab31617b3b95de6b7ba7593f05a587aed83d8fea9503",
+          "value_hash": "6e1fa576bc7504bfb345e38535203f82d99ccb70abf705376fe8f18fdf50cd47",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_e8e3e3d9e622304b8d2278d5c83527f5537e6dafea942b88bc6d2b80e95f2e2b",
+          "value_hash": "f15b4cb3bcd6c67675be7d898dae9d8852c0ea77d63b5a7dd728d53ea75229d3",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_2206ef32a0b04225085b4efcd6ee394cb212e9fff9758286ff766b6639f55f32",
+          "value_hash": "df53a2e10df30fffd3226cf02ed3fbb9c165c839e17289d6b79aa7b20167d5fa",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_16fc81cebab00df598623b517afb1a89561423a01b496b03ac1de297ba7a4514",
+          "value_hash": "3da16c62dae8927c31c629338b5035f9828b1cbf48559e7583abc40060ea7c60",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_c6351af670ba0efc1d25b7074f31cadc84ea441693b0c2e433ced68fa7be8b60",
+          "value_hash": "87a91c28c8ed8ad92c5025746b492b144fffcf12d70d0ae3a62cf927f8dfc2a2",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_12f77861d89ee32120adeca0b0a806a8c92bdb74a5d0f5ddc3f4f8d9ffdb5b22",
+          "value_hash": "0ea4ff7a77def376bf6d92b1c5f7e679b2be119b4f659b70a578b8ec7f3b907f",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_dc9d668c4638e75cb28d3ad88c8810e145662acaa2c9a857641b39f936a29205",
+          "value_hash": "13123f5276fd6f0bbade35dc0e72bea9203506c9cc5d13cbd86b4845baa3b72d",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_487ecbf70619c2433200f0819368e6e265d31c989fee8317558d7c8b0a682042",
+          "value_hash": "4bb39f5f7ab44fb60400c935cb409cfe2f75b5098467ea6aa36d8a6003f83ea8",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_3c365f6a2aa15d6ba62dab1df6807f1720b8481eca1e281899b15b4e41305348",
+          "value_hash": "4e3ce8cf1856974fc7d4d05f9b5bc7f637ccf7543224e239aff415d085d70d9e",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_286568488c23b041fc9fdf6fb7a6b6852e7d15ce5d0d6624646ca6eab36b9735",
+          "value_hash": "e19321031862566edc6bd5bdd8d57cdd400aeed1a7bdf6e55600cc0dad585f34",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_50db94ad7178e04e21597c4d79ae1e2d0e609e7d6e5950efcee36a931d4eb201",
+          "value_hash": "17b46fbc5ff109c5bd6588cb445c3740bd6bcbe10d3fd34e34f1716bdb335168",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_7e150f36e6598ec2a9cf605ddda379fdb8f4bbd1b4482b633fa08ed66aae7b19",
+          "value_hash": "2c999d83c6f7bd00a30ac15dccb634415534b9b552b689abd53ad2b754afaa46",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_4a5617869319dc678998ad20f74aaf14d4348d2c3d8c7f319a2158a900882c5f",
+          "value_hash": "60f118457649d5765270cec206fedcad8b0a569389109398f0248e66aceed75c",
+          "version": 0
+        }
+      ]
+    },
+    "epoch": 11466,
+    "events": [
+      {
+        "payload": {
+          "amount": "5000000"
+        },
+        "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee"
+      },
+      {
+        "payload": {
+          "amount": "100000000"
+        },
+        "substate_id": "vault_0f9b25baccd76716f3c6ee81c678be9efe9f654bfbd572ad42e7ab24f7063c49",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.withdraw"
+      }
+    ],
+    "fee_receipt": {
+      "cost_breakdown": {
+        "breakdown": {
+          "NativeExecution": 98492,
+          "RuntimeCall": 13,
+          "Storage": 5081,
+          "SubstateCreate": 425,
+          "TransactionWeight": 210,
+          "WasmExecution": 34
+        }
+      },
+      "exhaust_burn": 5212,
+      "total_fee_overcharge": 0,
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 104255
+    },
+    "fee_withdrawals": [],
+    "intent_commitment": "4fbce2f9af02aabd84b3570cd7cb092cf01bb1dbde1e6873f8d0c9ad4e8c692b",
+    "outcome": "Commit"
+  },
+  "transaction_id": "d050491cc53f7a70b398241d77ded1e9a28c893771947a9c4ebbb316cebce8dc"
+}

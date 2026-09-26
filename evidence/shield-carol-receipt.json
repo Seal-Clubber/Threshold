@@ -1,0 +1,62 @@
+{
+  "receipt": {
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+          "value_hash": "9fb8e7546f90d68dd90df3a093e219bff10f07da514737e9a918b7910468b46a",
+          "version": 1
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_0e4e1780406d82e827d56bf6ad29239c38c852a139ada7bd5bb7c2d0c683944e",
+          "value_hash": "69bda337604653535f5e2eb73a3577a1f70de76e534c171c7fed1d3da1fdccfb",
+          "version": 0
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_8e9298e556eea87a428f63c63105537d8bc5daf7b92fdcf3786597b99d752766",
+          "value_hash": "91a4c67bd8706a556f838d294e8a83480be1f8e9e5b82f660dcce911c14e1f6c",
+          "version": 0
+        }
+      ]
+    },
+    "epoch": 11432,
+    "events": [
+      {
+        "payload": {
+          "amount": "5000000"
+        },
+        "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee"
+      },
+      {
+        "payload": {
+          "amount": "100000000"
+        },
+        "substate_id": "vault_fc5cc3609fcef1461345ed0e42830610cb0d39658c7f4086bb834644d193a84a",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.withdraw"
+      }
+    ],
+    "fee_receipt": {
+      "cost_breakdown": {
+        "breakdown": {
+          "NativeExecution": 14492,
+          "RuntimeCall": 13,
+          "Storage": 1133,
+          "SubstateCreate": 75,
+          "TransactionWeight": 210,
+          "WasmExecution": 34
+        }
+      },
+      "exhaust_burn": 797,
+      "total_fee_overcharge": 0,
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 15957
+    },
+    "fee_withdrawals": [],
+    "intent_commitment": "f37630c522fa316dfb2ad4b3f51bf4507286886c6fe06d6fd286451f15ed7f6d",
+    "outcome": "Commit"
+  },
+  "transaction_id": "0e4e6192c80a024e6b284f4385dc242a8690aa020a830e98c3f852ff67cb98be"
+}

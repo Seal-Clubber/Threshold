@@ -1,0 +1,24 @@
+{
+  "network": "esmeralda",
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "template": "template_7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+  "indexer_substate_verified": true,
+  "published_binary_bytes": 303922,
+  "matching_build": {
+    "host": "Windows",
+    "rustc": "1.97.1 (8bab26f4f 2026-07-14)",
+    "command": "$env:CARGO_TARGET_DIR='target/windows-rebuild'; cargo build -p threshold-template --target wasm32-unknown-unknown --release --locked",
+    "artifact": "target/windows-rebuild/wasm32-unknown-unknown/release/threshold_template.wasm",
+    "bytes": 303922,
+    "sha256": "818d0842257cb7af83d4ee1b7ed1b2b74ef537cc6074c2f924cfa1e114c0de54"
+  },
+  "nonmatching_build": {
+    "host": "Ubuntu WSL",
+    "rustc": "1.98.1 (48a229cea 2026-09-01)",
+    "artifact": "target/wasm32-unknown-unknown/release/threshold_template.wasm",
+    "bytes": 344902,
+    "sha256": "7b33870128eb30401d518a953072379f02898b85deb08d91725b48d9ab2f6abe"
+  },
+  "published_sha256": "818d0842257cb7af83d4ee1b7ed1b2b74ef537cc6074c2f924cfa1e114c0de54",
+  "method": "Read indexer-verified template substate, hex-decode its binary, and SHA-256 hash that binary and two fresh release builds. The Windows Rust 1.97.1 build is byte-identical to the published binary. The Ubuntu Rust 1.98.1 build is not. This establishes reproduction under the matching toolchain, not toolchain-independent reproducibility or independent consensus proof verification."
+}
