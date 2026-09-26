@@ -1,0 +1,11 @@
+{
+  "community_pledge_records": 31,
+  "component": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+  "distinct_community_signing_keys": 3,
+  "funding_deadline": 11486,
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "network": "esmeralda",
+  "sponsor_pledge_records": 1,
+  "template": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+  "total_budget_microtari": 32000000
+}

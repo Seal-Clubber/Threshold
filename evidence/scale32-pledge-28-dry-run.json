@@ -1,0 +1,672 @@
+{
+  "finalize": {
+    "transaction_hash": "500d5ccfbd8948ab913edffd46e8bf0341cc24a818ea33e5199b17c08d41feee",
+    "events": [
+      {
+        "substate_id": "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      },
+      {
+        "substate_id": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+        "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+        "topic": "std.component.updated",
+        "payload": {}
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": 28
+        },
+        "return_type": "U32"
+      }
+    ],
+    "result": {
+      "Accept": {
+        "up_substates": [
+          [
+            "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+            {
+              "substate": {
+                "Vault": {
+                  "resource_container": {
+                    "Stealth": {
+                      "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                      "revealed_amount": "899710437",
+                      "locked_amount": "0"
+                    }
+                  },
+                  "freeze_flags": 0
+                }
+              },
+              "version": 15
+            }
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_d41171a4c5a2f3c6fc287754d09330892c833c9fee8c5c373e338fe8eab98773",
+            {
+              "substate": {
+                "Utxo": {
+                  "output": {
+                    "output": {
+                      "public_nonce": "3e8193e2f59572eb7d3cbaae7d40c555b629d31fa133b645dd058a04acc0f158",
+                      "encrypted_data": "ea1b5fba5d2d4475e6d0a24e9a589d50ec196d93ff7026b23282d0ec8962bb1df35cb9a601ca776da00f6f3669d861e03361069408906f87d8b440bd6c25d16fa672ebee73d53f23620f269005da3203",
+                      "minimum_value_promise": 1,
+                      "viewable_balance": null
+                    },
+                    "auth": {
+                      "Script": "449301196b9737b0c78415b7916c76756135b8ab801def0b30f0cc4899bb91ce"
+                    },
+                    "tag": 4281341415
+                  },
+                  "is_frozen": false
+                }
+              },
+              "version": 0
+            }
+          ],
+          [
+            "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+            {
+              "substate": {
+                "Component": {
+                  "header": {
+                    "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+                    "owner_rule": "None",
+                    "access_rules": {
+                      "method_access": {},
+                      "default": "AllowAll"
+                    },
+                    "entity_id": "1e"
+                  },
+                  "body": {
+                    "state": [
+                      [
+                        1,
+                        {
+                          "@cbor": "bytes",
+                          "hex": "5bef7b58b8a8a65eea86d422ee34893b7b1422b66b42a0f40f666e5f28075fe8"
+                        },
+                        {
+                          "@cbor": "tag",
+                          "tag": 131,
+                          "value": {
+                            "@cbor": "bytes",
+                            "hex": "0101010101010101010101010101010101010101010101010101010101010101"
+                          }
+                        },
+                        11486,
+                        {
+                          "@cbor": "bytes",
+                          "hex": "a21b2c9b28fa10f26c565048e47bb21763055584fc1edb90b306d3cfaba71467"
+                        },
+                        [
+                          [
+                            0,
+                            31000000,
+                            1000000,
+                            {
+                              "@cbor": "bytes",
+                              "hex": "3078797bdda21ded0ca8a86ea875d816b230ad3cfefe6d58f8d5535bbb798709"
+                            },
+                            [],
+                            0,
+                            11487,
+                            true
+                          ]
+                        ]
+                      ],
+                      [
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "28dadecba83665824ca21ba1cee4dc1188c2d19973eb226e4e9d608eed7fbf1f"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "2a19726f6891fda628eb363c05550ff9dc061f8059c61d22203d097e4412ce5b"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "423cfdf8780cb539a41037aeb93b1d229b6487bb24da911407d956312cf1f10f"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "0ab82d593d74bb0886873d01b1ebfcda86af13a8fca0fdaaa955ba1d1df13c05"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "2a37b3b67ac43d1dae6639ce38f52a7d4bf62568422552451d3b469b690eb635"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "c2ec969a7239435f58fb50edfa9a542cca0a945e785179c94d2cd98a659bd96c"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "b0aef9e1cdb839c580b63876812de14086f9feb79efe40bad23af9d26f32fb59"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "7280ea1392044f0e948393815768ba16bd362601b375eaccdaf396a1bff94523"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "ae5479a887addc2454e3218347a5ae34d8ae75c2936ae05532b1b4621c35ef3e"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "9016feefd8cba31184f97c21547c19c75c0584fdea82716798347621439be648"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "4e65fd9bd5713424d81afa74b3fbe8a7faafc7f475aee3415a0324ee0fe44d4e"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "0c7774170103bf64cb360eba4a5ca4c52371b0bf619ada4c0f101715f9335958"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "14df231b2ac6e83d7644c50db478f1fa01961fd732840ed86eec8a9e88fe5247"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "221f03aa59d119fce7b2fcf59fd63a0264001b248947a7a69527c74f2a959734"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "72e8a8d25192035d1fd5654f8b5b1fb7fc19544f5893b325f06d832c72b40370"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "e6ac3e0b9413f6ef3b2731d6e8fedc5a7f5a3b33c0db1720e60b1dba6651d73b"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "00038fc75528a79a330a6fb5a2abfb5ad02be753f458d2e04ab190d4b29e4609"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "c268659fc766f4f187bbce3a5e163e14fff717df51c3abefb291ee6c312bfc60"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "d0fefd3d3ee2d0792ca128c1dd8c563e11131f90787cc70f10d500138c0d5078"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "1a04e190623bc2e1bf60371a1fd4be1faae162b1cf48bf097c2330bb6948c044"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "7e89b0d8b072b1b85286ef923b9824f8bb5b602515c7d22cd61dc9b546126414"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "28ae623d99677dc9d68374b98f8b7a14b79774273578fde55b3f516c1cfed029"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "d0c3f32724e89add0334d9517f495701714dc86c6f3f72b7ac1cac086a548357"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "ee92676e3a8b757ad279c798129bef624a084302d88d90f23d02afa3a4686b08"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "e014efe80d494679c2bb2ebdadbccd9809d9312cde6a244d121cfa0e3817870e"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "1adfe2c345e9a35fbad55df0751835bae43835e2337c3aacdb696f24d3a8145b"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "8412a667df0fdf227c3b0b3ebdbbf50b26baebdbc083a69ec34950586f8cf03c"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "58240ed316c15336b54312f2e56b2e67a0b9fa3dfe35112056bec900dd0aad60"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "84f022af6c10988abe00c2f416fbc658b74fa3df0d56cd5187a2e3f909f8aa38"
+                            }
+                          ],
+                          false
+                        ],
+                        [
+                          {
+                            "@cbor": "bytes",
+                            "hex": "7ea224b129addbd2b5ad6dcc33dc07aa7b0a0086aa8d9c731e45fb9273514465"
+                          },
+                          false,
+                          [
+                            {
+                              "@cbor": "bytes",
+                              "hex": "d41171a4c5a2f3c6fc287754d09330892c833c9fee8c5c373e338fe8eab98773"
+                            }
+                          ],
+                          false
+                        ]
+                      ],
+                      [],
+                      false,
+                      0,
+                      [
+                        []
+                      ]
+                    ]
+                  }
+                }
+              },
+              "version": 29
+            }
+          ],
+          [
+            "txreceipt_500d5ccfbd8948ab913edffd46e8bf0341cc24a818ea33e5199b17c08d41feee",
+            {
+              "substate": {
+                "TransactionReceipt": {
+                  "outcome": "Commit",
+                  "diff_summary": {
+                    "upped": [
+                      {
+                        "substate_id": "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+                        "version": 15,
+                        "value_hash": "c5003142d1622042dee26b1a44fd3af376130bb41713e1e1ce99337a655fb8cf"
+                      },
+                      {
+                        "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_d41171a4c5a2f3c6fc287754d09330892c833c9fee8c5c373e338fe8eab98773",
+                        "version": 0,
+                        "value_hash": "bd036ef07439c6c1f0bf31c9cc413b522e2b9236d1bf43333553017259c6e373"
+                      },
+                      {
+                        "substate_id": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+                        "version": 29,
+                        "value_hash": "efff316d6667d61c70ade9d7c0f8a7d88bf35780eb7cc7b6779de7d8144b78d1"
+                      }
+                    ]
+                  },
+                  "fee_withdrawals": [],
+                  "events": [
+                    {
+                      "substate_id": "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+                      "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                      "topic": "std.vault.pay_fee",
+                      "payload": {
+                        "amount": "5000000"
+                      }
+                    },
+                    {
+                      "substate_id": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+                      "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+                      "topic": "std.component.updated",
+                      "payload": {}
+                    }
+                  ],
+                  "fee_receipt": {
+                    "total_fee_payment": 5000000,
+                    "total_fees_paid": 13555,
+                    "total_fee_overcharge": 0,
+                    "cost_breakdown": {
+                      "breakdown": {
+                        "RuntimeCall": 14,
+                        "Storage": 3224,
+                        "TransactionWeight": 397,
+                        "TemplateLoad": 1010,
+                        "SubstateCreate": 50,
+                        "WasmExecution": 321,
+                        "NativeExecution": 8539
+                      }
+                    },
+                    "exhaust_burn": 677
+                  },
+                  "epoch": 11467,
+                  "intent_commitment": "214f5a11e7d09a6f510e13cf064635f6f2871c95fe792279ddc4009659d61177"
+                }
+              },
+              "version": 0
+            }
+          ]
+        ],
+        "down_substates": [
+          [
+            "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+            14
+          ],
+          [
+            "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+            28
+          ],
+          [
+            "utxo_0101010101010101010101010101010101010101010101010101010101010101_5209282608af86110a9970df789be4c51157f68c9bcbd947ef65d6aff67db757",
+            0
+          ]
+        ],
+        "fee_withdrawals": []
+      }
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 13555,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 14,
+          "Storage": 3224,
+          "TransactionWeight": 397,
+          "TemplateLoad": 1010,
+          "SubstateCreate": 50,
+          "WasmExecution": 321,
+          "NativeExecution": 8539
+        }
+      },
+      "exhaust_burn": 677
+    },
+    "total_fees_required": 13555
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 7175240
+  },
+  "execute_epoch": 11467,
+  "wasm_execution_points": 321368,
+  "native_execution_points": 8539032
+}

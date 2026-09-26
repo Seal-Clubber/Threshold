@@ -1,0 +1,38 @@
+{
+  "network": "esmeralda",
+  "component": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+  "campaign_kind": "capacity fixture, one upfront stage",
+  "community_pledge_records": 31,
+  "sponsor_pledge_records": 1,
+  "distinct_community_signing_keys": 3,
+  "community_batch_sizes": [15, 15, 1],
+  "recipient_output_decrypted_microtari": 32000000,
+  "indexed_component_verified": true,
+  "indexed_registered_pledges": 32,
+  "indexed_selected_pledges": 32,
+  "indexed_next_stage": 1,
+  "indexed_recipient_output_verified_and_unspent": true,
+  "epoch": 11468,
+  "first_community_shield": {
+    "transaction_id": "d050491cc53f7a70b398241d77ded1e9a28c893771947a9c4ebbb316cebce8dc",
+    "outcome": "Commit",
+    "fee_microtari": 104255,
+    "signed_transaction_bytes": 4596,
+    "private_outputs": 16
+  },
+  "activation": {
+    "transaction_id": "6710113bd039bd3c54743f9e8581498e286f5a43039e3b1031b7ff6d4c36e066",
+    "outcome": "Commit",
+    "fee_microtari": 8776,
+    "signed_transaction_bytes": 582
+  },
+  "payout": {
+    "transaction_id": "699be5e2cd7a3be7d0eaa7e8f2d31334215a8062c851a781c225ae284b856666",
+    "outcome": "Commit",
+    "fee_microtari": 17074,
+    "signed_transaction_bytes": 6912,
+    "private_inputs": 32,
+    "private_outputs": 1
+  },
+  "measurement_method": "Public signed transaction bodies from the Ootle indexer were decoded with pinned tari_ootle_transaction v0.41.2, their calculated transaction IDs were checked, and tari_bor-encoded byte lengths were counted."
+}

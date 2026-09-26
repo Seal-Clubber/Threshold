@@ -1,0 +1,61 @@
+{
+  "receipt": {
+    "diff_summary": {
+      "upped": [
+        {
+          "substate_id": "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+          "value_hash": "fccc5190c84409d18e872468e0d85a2ccacf292c464f7102bd64aa9dd16703e7",
+          "version": 6
+        },
+        {
+          "substate_id": "utxo_0101010101010101010101010101010101010101010101010101010101010101_7e89b0d8b072b1b85286ef923b9824f8bb5b602515c7d22cd61dc9b546126414",
+          "value_hash": "533df80ac3c52ea73902d2dc1bd4535e22dbd8181ac81d7ffd4317c129508821",
+          "version": 0
+        },
+        {
+          "substate_id": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+          "value_hash": "b653fd5af88b1b029f9737492ad06954f4ad0ef2c5473b1db6d13f6b569798f6",
+          "version": 20
+        }
+      ]
+    },
+    "epoch": 11467,
+    "events": [
+      {
+        "payload": {
+          "amount": "5000000"
+        },
+        "substate_id": "vault_464a7989b55561431942a75bc983b4b3aa251fc82f8f5d32c59c7bbad8a75cb2",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee"
+      },
+      {
+        "payload": {},
+        "substate_id": "component_1efe725d289662d69c1c39e87255e2229427d2c1af8ad226c1d43f9540d83e9a",
+        "template_address": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400",
+        "topic": "std.component.updated"
+      }
+    ],
+    "fee_receipt": {
+      "cost_breakdown": {
+        "breakdown": {
+          "NativeExecution": 8539,
+          "RuntimeCall": 14,
+          "Storage": 2575,
+          "SubstateCreate": 50,
+          "TemplateLoad": 1010,
+          "TransactionWeight": 397,
+          "WasmExecution": 256
+        }
+      },
+      "exhaust_burn": 642,
+      "total_fee_overcharge": 0,
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 12841
+    },
+    "fee_withdrawals": [],
+    "intent_commitment": "52e67a47027b3a4cb88d446ee895f9e1a699396b71310b3a922a32172831b9c4",
+    "outcome": "Commit"
+  },
+  "transaction_id": "27adcd197928409e9360510599e94bd4739b2ee069462bfa7004f35714de0e13"
+}
