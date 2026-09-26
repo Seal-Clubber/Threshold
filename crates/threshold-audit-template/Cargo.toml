@@ -1,0 +1,18 @@
+[package]
+name = "threshold-audit-template"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "PROOF OF CONCEPT: Development and security audit; not deployed or end-to-end tested"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+threshold-poc-core = { path = "../threshold-poc-core" }
+tari_template_lib = { version = "=0.32.1", features = ["borsh"] }
+tari_bor = "=0.16.1"
+minicbor = { version = "=2.3.0", features = ["derive", "std"] }
+
+[build-dependencies]
+tari_ootle_template_build = "=0.12.0"

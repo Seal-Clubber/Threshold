@@ -1,5 +1,7 @@
 # GitHub Pages demo
 
+Published demo: [seal-clubber.github.io/Threshold](https://seal-clubber.github.io/Threshold/).
+
 The repo includes a static build and a Pages workflow. The published site is one page: the interactive bounty map and its integrated campaign sandbox. No wallet, private recovery material, transaction submission, showcase, observer, or evidence archive is published.
 
 ## Preview before uploading

@@ -1,5 +1,13 @@
 [workspace]
-members = ["crates/threshold-template", "crates/threshold-client"]
+members = [
+    "crates/threshold-template", "crates/threshold-client",
+    "crates/threshold-poc-core",
+    "crates/threshold-exchange-template",
+    "crates/threshold-audit-template",
+    "crates/threshold-infrastructure-template",
+    "crates/threshold-grant-template",
+    "crates/threshold-community-template",
+]
 resolver = "2"
 
 [workspace.package]

@@ -52,3 +52,9 @@ The observed missing-UTXO failure on the first pledge was a **client transaction
 ## Remaining qualification
 
 The local engine has exercised boundary and replay cases; some additional Esmeralda adversarial equivalents, stale-indexer behavior, and capacity and cost above 32 pledges remain to be recorded. The indexer has returned `summary: null` for several committed transactions even though the submitting client received `Commit` receipts and the indexer-verified component/UTXO views showed the resulting state changes. Those saved receipts are local client evidence where the indexer view has not caught up. Missed-funding, partial-delivery and final audit owner refunds are committed, but no production or mainnet claim is made.
+
+## Separate use-case PoCs — compilation and term checks only
+
+The new exchange, audit, infrastructure, grant, and community-only template crates are separate from the published v1 above. All five built to WASM in Ubuntu WSL with the pinned dependencies; their distinct Ootle entry points were present in the resulting modules. Four `threshold-poc-core` tests passed for example budgets and encoding, funding modes, sponsor-role admission, and selected term validation.
+
+These checks do not execute the Ootle engine or prove transaction, payment, or refund behavior. No PoC was deployed, and none inherits the v1 testnet qualification. The existing v1 client and recovery packages do not support their experimental version 100 terms. Detailed engine tests, adversarial transfers, client integration, recovery validation, and testnet execution remain unfinished. See [the template guide](campaign-templates.md).

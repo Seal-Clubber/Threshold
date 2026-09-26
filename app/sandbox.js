@@ -108,6 +108,11 @@ function setSandboxPreset(name) {
 }
 
 sandboxEl('sandbox-open').addEventListener('click', () => sandboxEl('sandbox-dialog').showModal());
+sandboxEl('configuration-open').addEventListener('click', () => sandboxEl('sandbox-dialog').showModal());
+sandboxEl('demo-open').addEventListener('click', () => {
+  sandboxEl('intro-title').focus({ preventScroll: true });
+  sandboxEl('intro-title').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 sandboxEl('sandbox-close').addEventListener('click', () => sandboxEl('sandbox-dialog').close());
 sandboxEl('sandbox-done').addEventListener('click', () => sandboxEl('sandbox-dialog').close());
 sandboxEl('sandbox-reset').addEventListener('click', () => setSandboxPreset('bounty'));
@@ -115,3 +120,20 @@ sandboxFields.forEach(field => sandboxEl(`sandbox-${field}`).addEventListener('i
 sandboxEl('sandbox-progress').addEventListener('input', renderSandbox);
 document.querySelectorAll('[data-sandbox-preset]').forEach(button => button.addEventListener('click', () => setSandboxPreset(button.dataset.sandboxPreset)));
 renderSandbox();
+
+const usecasesDialog = sandboxEl('usecases-dialog');
+sandboxEl('usecases-open').addEventListener('click', () => usecasesDialog.showModal());
+sandboxEl('usecases-close').addEventListener('click', () => usecasesDialog.close());
+sandboxEl('usecases-sandbox').addEventListener('click', () => {
+  usecasesDialog.close();
+  sandboxEl('sandbox-dialog').showModal();
+});
+function showUsecase(name) {
+  document.querySelectorAll('[data-usecase]').forEach(option => option.setAttribute('aria-pressed', String(option.dataset.usecase === name)));
+  document.querySelectorAll('.usecase').forEach(article => { article.hidden = article.id !== `usecase-${name}`; });
+}
+document.querySelectorAll('[data-usecase]').forEach(button => button.addEventListener('click', () => showUsecase(button.dataset.usecase)));
+document.querySelectorAll('[data-open-usecase]').forEach(button => button.addEventListener('click', () => {
+  showUsecase(button.dataset.openUsecase);
+  usecasesDialog.showModal();
+}));

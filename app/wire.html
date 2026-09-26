@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#081522">
-  <title>Threshold — a bounty in motion</title>
-  <meta name="description" content="An interactive wire diagram of confidential matched funding, milestone payments, and independent recovery.">
+  <title>Threshold — crowdfunding with milestone payments</title>
+  <meta name="description" content="Explore Threshold: confidential contributions, sponsor matching, milestone payments, and individual recovery on Ootle. Try the interactive bounty demo.">
   <link rel="stylesheet" href="/wire.css">
   <script src="/wire.js" defer></script>
   <script src="/sandbox.js" defer></script>
@@ -13,8 +13,8 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <span class="brand"><span class="brand-mark">◇</span> threshold<span class="brand-period">.</span></span>
-      <span class="top-label">INTERACTIVE BOUNTY MAP</span>
+      <span class="brand">threshold<span class="brand-period">.</span></span>
+      <span class="top-label">CROWDFUNDING ON OOTLE</span>
       <div class="top-actions">
         <button id="sandbox-open" class="chrome-button sandbox-launch" type="button">◇ Sandbox</button>
         <button id="theme-toggle" class="chrome-button" type="button" aria-label="Switch to light mode" aria-pressed="true">◐ <span id="theme-label">Light</span></button>
@@ -22,28 +22,68 @@
         <button id="next" class="chrome-button" type="button">Continue ↓</button>
       </div>
     </header>
-    <div class="status-strip" aria-label="Current hypothetical outcome">
-      <span class="status-brand">HYPOTHETICAL BOUNTY</span>
+    <main id="flow-scroll" class="flow-scroll">
+      <section class="overview page-section" aria-labelledby="overview-title">
+        <div class="overview-copy">
+          <span class="eyebrow">THRESHOLD / EXPERIMENTAL PROTOCOL</span>
+          <h1 id="overview-title">Fund work together.<br><em>Pay in stages.</em></h1>
+          <p class="overview-lead">Threshold is a crowdfunding protocol on Ootle. A community and a sponsor fund a shared goal, with payment rules agreed before anyone pledges.</p>
+          <p>The full budget must be committed before payments begin. Work can be paid in milestones, with named reviewers approving delivery. If things fall through, contributors can recover eligible unpaid funds after the deadline.</p>
+          <div class="overview-actions"><button id="demo-open" class="chrome-button primary-action" type="button">Try the bounty demo ↓</button><span>Simulation · no wallet needed</span></div>
+          <details class="copy-details overview-limits"><summary>What the protocol does—and does not—guarantee</summary><p>The contract enforces funding and payment rules; reviewers judge the work. Released payments cannot be reclaimed. Contributions use confidential outputs, but participation remains visible and a coordinator may learn shared amounts. Recovery needs your backup, fee funds, and network access. This implementation is testnet-only and unaudited.</p></details>
+        </div>
+        <aside class="configuration" aria-labelledby="configuration-title">
+          <span class="section-kicker">YOUR CAMPAIGN, YOUR TERMS</span>
+          <h2 id="configuration-title">Choose how it works</h2>
+          <dl>
+            <div><dt>Funding goal &amp; sponsor share</dt><dd>Set the budget and how much each side contributes.</dd></div>
+            <div><dt>Payment schedule</dt><dd>Set each milestone’s amount and recipient, including any start payment after full funding.</dd></div>
+            <div><dt>Reviewers &amp; approvals</dt><dd>Choose who reviews the work and how many approvals a milestone needs.</dd></div>
+            <div><dt>Deadlines</dt><dd>Set the funding window and milestone deadlines that govern payment and recovery.</dd></div>
+          </dl>
+          <details class="copy-details configuration-limit"><summary>Current limits &amp; future flexibility</summary>
+            <p>Current version: up to 32 pledges, 8 stages, and 5 reviewers per stage, with a sponsor share at every stage.</p>
+            <p>The design can evolve. Higher caps or sponsor-free funding need a new contract version and fresh testing against Ootle’s transaction limits. Existing campaigns keep the terms agreed before funding.</p>
+          </details>
+          <button id="configuration-open" class="chrome-button" type="button">Explore settings in Sandbox →</button>
+        </aside>
+      </section>
+      <section class="examples page-section" aria-labelledby="examples-title">
+        <div class="section-heading"><h2 id="examples-title">What could your community fund?</h2><button id="usecases-open" class="chrome-button" type="button">Explore the examples →</button></div>
+        <div class="example-grid">
+          <button class="example-card" type="button" data-open-usecase="bounty"><span class="example-type">DEMO BELOW</span><strong>Developer bounties</strong><span>Fund a software feature. Pay the developer as the work is accepted.</span><span class="example-link">Explore bounty funding →</span></button>
+          <button class="example-card" type="button" data-open-usecase="exchange"><span class="example-type">PROOF OF CONCEPT</span><strong>Exchange listing &amp; integration</strong><span>Raise agreed listing fees and integration costs. Funding does not guarantee a listing.</span><span class="example-link">Explore exchange funding →</span></button>
+          <button class="example-card" type="button" data-open-usecase="community"><span class="example-type extension">PROOF OF CONCEPT</span><strong>Community-only funding</strong><span>Members cover a shared project themselves. A separate sponsor-free PoC template is included.</span><span class="example-link">Explore the sponsor-free concept →</span></button>
+          <button class="example-card" type="button" data-open-usecase="audit"><span class="example-type">PROOF OF CONCEPT</span><strong>Security audits</strong><span>Fund development and an independent audit in one campaign, with separate recipients.</span><span class="example-link">Explore audit funding →</span></button>
+          <button class="example-card" type="button" data-open-usecase="infrastructure"><span class="example-type">PROOF OF CONCEPT</span><strong>Shared infrastructure</strong><span>Share the cost of wallet updates, maintenance, or documentation.</span><span class="example-link">Explore shared maintenance →</span></button>
+          <button class="example-card" type="button" data-open-usecase="grants"><span class="example-type">PROOF OF CONCEPT</span><strong>Matched grants</strong><span>A foundation adds an agreed contribution to a community-funded project.</span><span class="example-link">Explore matching grants →</span></button>
+        </div>
+        <p class="examples-note">The five additional Ootle templates are proofs of concept: compiled and checked for basic terms, but not deployed or tested end to end.</p>
+      </section>
+      <section class="demo-section" aria-labelledby="intro-title">
+      <div class="status-strip" aria-label="Current hypothetical outcome">
+      <span class="status-brand">DEMO FUNDS</span>
       <span>Community <strong id="community-total">60 / 60</strong></span>
       <span>Sponsor <strong id="sponsor-total">40 / 40</strong></span>
       <span>Paid <strong id="paid-total">100 / 100</strong></span>
       <span id="status-label" class="status-label">SUCCESS PATH</span>
     </div>
-    <main id="flow-scroll" class="flow-scroll">
       <section class="intro" aria-labelledby="intro-title">
-        <span class="eyebrow">THRESHOLD / INTERACTIVE BOUNTY MAP</span>
-        <h1 id="intro-title">One bounty.<br><em>Many possible paths.</em></h1>
-        <p>Start with every switch off. Pledge the full match, then follow the bounty through payment, delivery, review, and recovery. Go back to change a decision. Open Sandbox to explore other campaign designs separately.</p>
-        <div class="legend"><span><i class="legend-main"></i> Successful route</span><span><i class="legend-branch"></i> Alternative route</span><span><i class="legend-current"></i> Reached outcome</span></div>
+        <span class="eyebrow">THRESHOLD / INTERACTIVE DEMO</span>
+        <h2 id="intro-title" tabindex="-1">Try a developer bounty</h2>
+        <p>A community and a sponsor raise 100 tTARI for a new software feature. The developer gets 10 to start once the goal is funded, and 90 after approval.</p>
+        <p class="intro-instruction">Turn on the switches to reveal the next step. Go back and change any decision to see what happens.</p>
+        <div class="legend"><span><i class="legend-main"></i> Payment steps</span><span><i class="legend-branch"></i> If something goes wrong</span><span><i class="legend-current"></i> Current step</span></div>
       </section>
       <div id="flow" class="flow" aria-label="Interactive bounty wire diagram"></div>
-      <p class="footnote">Illustrative simulation only: these switches do not move funds or query the chain. The separate sandbox does not alter this bounty. In a real campaign, frozen terms cannot change after pledging; a completed refund cannot be rewound.</p>
+      <p class="footnote">This is a simulation. No funds move. You can undo decisions here; real payments and refunds cannot be undone, and campaign terms are fixed before funding.</p>
+      </section>
     </main>
   </div>
   <dialog id="sandbox-dialog" class="sandbox-dialog" aria-labelledby="sandbox-title">
-    <div class="sandbox-head"><span class="sandbox-kicker">EXPLORE THE PROTOCOL</span><button id="sandbox-close" type="button" aria-label="Close sandbox">×</button></div>
-    <h2 id="sandbox-title">Campaign sandbox</h2>
-    <p>Sketch funding terms for your own idea. This planner is independent of the bounty map and never moves funds.</p>
+    <div class="sandbox-head"><span class="sandbox-kicker">SANDBOX</span><button id="sandbox-close" type="button" aria-label="Close sandbox">×</button></div>
+    <h2 id="sandbox-title">Plan your own campaign</h2>
+    <p>Try a budget, payment schedule, and review rules. These settings do not change the bounty demo.</p>
     <div class="sandbox-presets"><span>STARTING POINTS</span><button type="button" data-sandbox-preset="bounty">Developer bounty</button><button type="button" data-sandbox-preset="tool">Shared tool</button><button type="button" data-sandbox-preset="many">100+ funders</button></div>
     <div class="sandbox-layout">
       <div class="sandbox-controls">
@@ -60,10 +100,74 @@
         <div class="sandbox-summary"><div><span>COMMUNITY</span><strong id="sandbox-community-result">60</strong></div><div><span>SPONSOR</span><strong id="sandbox-sponsor-result">40</strong></div><div><span>FIRST PAYMENT</span><strong id="sandbox-first-result">10</strong></div></div>
         <label class="sandbox-field sandbox-progress"><span>Try the funding gate <output id="sandbox-progress-value">80% pledged</output></span><input id="sandbox-progress" type="range" min="0" max="100" step="1" value="80"></label><div id="sandbox-gate" class="sandbox-gate"></div>
         <strong class="sandbox-preview-title">Payment schedule</strong><div id="sandbox-schedule" class="sandbox-schedule"></div>
-        <p class="sandbox-note">Recipient, sponsor and reviewer keys, exact stage amounts, evidence policy and deadlines must be frozen before pledging. Real payouts also need recipient signatures; reviewed stages need timely quorum. Each owner can recover eligible unpaid cells with their own recovery package and fee funds.</p>
+        <p class="sandbox-note">V1 needs a sponsor contribution at every stage. Sponsor-free campaigns are not supported yet.</p>
+        <details class="copy-details"><summary>Rules for a real campaign</summary><p>Recipients, sponsor, reviewers, amounts, evidence requirements, and deadlines are fixed before funding. Payments need the recipient’s signature and any required reviewer approvals before the deadline. Refunds require each contributor’s recovery backup and fee funds.</p></details>
       </div>
     </div>
     <div class="sandbox-actions"><button id="sandbox-reset" type="button">Reset example</button><button id="sandbox-done" type="button">Done</button></div>
+  </dialog>
+  <dialog id="usecases-dialog" class="sandbox-dialog usecases-dialog" aria-labelledby="usecases-title">
+    <div class="sandbox-head"><span class="sandbox-kicker">USE CASES</span><button id="usecases-close" type="button" aria-label="Close use cases">×</button></div>
+    <h2 id="usecases-title">What can you fund?</h2>
+    <p>Choose an example to see who pays, when work gets paid, and what the limits are.</p>
+    <div class="usecases-layout">
+      <nav class="usecases-menu" aria-label="Funding use cases">
+        <button type="button" data-usecase="bounty" aria-pressed="true" aria-controls="usecase-bounty">Developer bounties</button>
+        <button type="button" data-usecase="exchange" aria-pressed="false" aria-controls="usecase-exchange">Exchange costs</button>
+        <button type="button" data-usecase="community" aria-pressed="false" aria-controls="usecase-community">Community-only</button>
+        <button type="button" data-usecase="audit" aria-pressed="false" aria-controls="usecase-audit">Security audits</button>
+        <button type="button" data-usecase="infrastructure" aria-pressed="false" aria-controls="usecase-infrastructure">Shared infrastructure</button>
+        <button type="button" data-usecase="grants" aria-pressed="false" aria-controls="usecase-grants">Matched grants</button>
+      </nav>
+      <div class="usecases-content">
+        <article id="usecase-bounty" class="usecase" aria-labelledby="usecase-bounty-title">
+          <span class="usecase-status">Fits v1 with a sponsor</span>
+          <h3 id="usecase-bounty-title">A new software feature</h3>
+          <p>Users and a sponsor pay a developer to build a feature they need.</p>
+          <ol class="usecase-steps"><li>Full community + sponsor match</li><li>Agreed start payment</li><li>Reviewers accept the delivery</li></ol>
+          <p class="usecase-boundary">No delivery? Contributors can reclaim unpaid funds after the deadline. Money already paid cannot be recovered.</p>
+        </article>
+        <article id="usecase-exchange" class="usecase" aria-labelledby="usecase-exchange-title" hidden>
+          <span class="usecase-status">PoC template · requires agreed recipients and a sponsor</span>
+          <h3 id="usecase-exchange-title">Exchange listing and integration</h3>
+          <p>A community and sponsor raise money for agreed exchange fees, integration work, and testing.</p>
+          <ol class="usecase-steps"><li>Agree on the work with the exchange</li><li>Raise the full budget</li><li>Pay at the agreed milestones</li></ol>
+          <p class="usecase-boundary">Funding does not guarantee a listing. Fees already paid cannot be refunded by Threshold.</p>
+          <details class="copy-details"><summary>Payment requirements</summary><p>The exchange must support the Ootle signing and payment flow to receive funds directly. If someone receives the funds and pays the exchange elsewhere, you must trust them to make that payment. Threshold cannot guarantee liquidity or trading price.</p></details>
+        </article>
+        <article id="usecase-community" class="usecase" aria-labelledby="usecase-community-title" hidden>
+          <span class="usecase-status extension">Separate PoC template</span>
+          <h3 id="usecase-community-title">Community funding without a sponsor</h3>
+          <p>Members cover the whole budget for a website, event, or shared resource.</p>
+          <ol class="usecase-steps"><li>Community funds 100% of the goal</li><li>Milestones govern payments</li><li>Owners recover eligible unpaid funds</li></ol>
+          <p class="usecase-boundary">A separate sponsor-free PoC contract is included in the repository. It is not deployed or tested end to end, and client and recovery support are unfinished. Published v1 still requires a sponsor.</p>
+        </article>
+        <article id="usecase-audit" class="usecase" aria-labelledby="usecase-audit-title" hidden>
+          <span class="usecase-status">PoC template · requires a sponsor</span>
+          <h3 id="usecase-audit-title">Development and a security audit</h3>
+          <p>Projects and a sponsor fund a shared library and an independent auditor in one campaign.</p>
+          <ol class="usecase-steps"><li>Fund development + audit together</li><li>Accept the code milestone</li><li>Accept the audit report and agreed follow-up</li></ol>
+          <p class="usecase-boundary">The developer and auditor can receive separate, ordered payments. Funding both does not guarantee delivery or bug-free software.</p>
+        </article>
+        <article id="usecase-infrastructure" class="usecase" aria-labelledby="usecase-infrastructure-title" hidden>
+          <span class="usecase-status">PoC template · requires a sponsor</span>
+          <h3 id="usecase-infrastructure-title">Shared tools and maintenance</h3>
+          <p>Users and a sponsor pay for wallet updates, explorer maintenance, or documentation over a fixed period.</p>
+          <ol class="usecase-steps"><li>Fund a fixed work package</li><li>Review progress at each stage</li><li>Release the next agreed payment</li></ol>
+          <p class="usecase-boundary">Up to eight payment stages per campaign. Reviewers check the work; renewals need a new campaign.</p>
+        </article>
+        <article id="usecase-grants" class="usecase" aria-labelledby="usecase-grants-title" hidden>
+          <span class="usecase-status">PoC template · requires a sponsor</span>
+          <h3 id="usecase-grants-title">Community grants with a sponsor match</h3>
+          <p>A foundation adds an agreed amount to community funding for education, translations, research, or open-source work.</p>
+          <ol class="usecase-steps"><li>Freeze the goal and match</li><li>Meet each role’s exact budget</li><li>Review the agreed deliverables</li></ol>
+          <p class="usecase-boundary">One sponsor per campaign. Reviewers are chosen before funding; donating more does not buy more votes.</p>
+        </article>
+      </div>
+    </div>
+    <p class="usecases-footnote">The additional templates are proofs of concept. Compilation and basic term checks passed; transaction, recovery, and testnet testing are still needed.</p>
+    <details class="copy-details"><summary>Privacy and refunds</summary><p>Contribution amounts are encrypted. Participating wallets and campaign totals remain public.</p><p>To claim an eligible refund yourself, you need your saved recovery file and unlock key, funds for transaction fees, and network access.</p></details>
+    <div class="sandbox-actions"><button id="usecases-sandbox" type="button">Try your own budget →</button></div>
   </dialog>
 </body>
 </html>

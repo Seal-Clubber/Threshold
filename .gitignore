@@ -1,0 +1,11 @@
+.upstream/
+target/
+node_modules/
+_site/
+github-upload/
+.local/
+*.recovery
+*.secret
+.env
+.env.*
+!.env.example

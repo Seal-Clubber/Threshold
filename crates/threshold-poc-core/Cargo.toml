@@ -1,0 +1,12 @@
+[package]
+name = "threshold-poc-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Unqualified proof-of-concept campaign logic; not the published Threshold v1"
+
+[dependencies]
+tari_template_lib = { version = "=0.32.1", features = ["borsh"] }
+minicbor = { version = "=2.3.0", features = ["derive", "std"] }
+blake2 = "=0.10.6"
+borsh = "1.6"

@@ -4743,6 +4743,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "threshold-audit-template"
+version = "0.1.0"
+dependencies = [
+ "minicbor",
+ "tari_bor",
+ "tari_ootle_template_build",
+ "tari_template_lib",
+ "threshold-poc-core",
+]
+
+[[package]]
 name = "threshold-client"
 version = "0.1.0"
 dependencies = [
@@ -4764,6 +4775,60 @@ dependencies = [
  "tari_utilities",
  "threshold-template",
  "tokio",
+]
+
+[[package]]
+name = "threshold-community-template"
+version = "0.1.0"
+dependencies = [
+ "minicbor",
+ "tari_bor",
+ "tari_ootle_template_build",
+ "tari_template_lib",
+ "threshold-poc-core",
+]
+
+[[package]]
+name = "threshold-exchange-template"
+version = "0.1.0"
+dependencies = [
+ "minicbor",
+ "tari_bor",
+ "tari_ootle_template_build",
+ "tari_template_lib",
+ "threshold-poc-core",
+]
+
+[[package]]
+name = "threshold-grant-template"
+version = "0.1.0"
+dependencies = [
+ "minicbor",
+ "tari_bor",
+ "tari_ootle_template_build",
+ "tari_template_lib",
+ "threshold-poc-core",
+]
+
+[[package]]
+name = "threshold-infrastructure-template"
+version = "0.1.0"
+dependencies = [
+ "minicbor",
+ "tari_bor",
+ "tari_ootle_template_build",
+ "tari_template_lib",
+ "threshold-poc-core",
+]
+
+[[package]]
+name = "threshold-poc-core"
+version = "0.1.0"
+dependencies = [
+ "blake2 0.10.6",
+ "borsh",
+ "minicbor",
+ "tari_template_lib",
 ]
 
 [[package]]
