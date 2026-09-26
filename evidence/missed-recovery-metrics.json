@@ -1,0 +1,25 @@
+{
+  "network": "esmeralda",
+  "refund": {
+    "transaction_id": "bfc6ca02c0df4994c229d06416a39854b57b95f914b8a0b47d194f7172d33dae",
+    "outcome": "Commit",
+    "epoch": 11440,
+    "amount_microtari": 3000000,
+    "fee_microtari": 11378,
+    "encoded_transaction_bytes": 1569,
+    "native_proof_ms": 2283,
+    "component_refunded_flag_verified_by_indexer": true,
+    "private_output_decrypted": true
+  },
+  "respend": {
+    "transaction_id": "3cba55a27714acd325bcb245cb0a396f28d9fe2db8762ab16c4d5a96442417e2",
+    "outcome": "Commit",
+    "epoch": 11440,
+    "fee_microtari": 9336,
+    "encoded_transaction_bytes": 1482,
+    "new_private_utxo_verified_by_indexer": true,
+    "new_private_utxo_unspent": true,
+    "duplicate_command_submitted_new_transaction": false
+  },
+  "qualification": "Client-observed full Commit receipts and indexer-reported verified component/UTXO state; no independent consensus light client. The local observer and coordinator were offline during recovery."
+}

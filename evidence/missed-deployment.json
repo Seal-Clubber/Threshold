@@ -1,0 +1,9 @@
+{
+  "community_budget_microtari": 3000000,
+  "component": "component_4dd4e808d217c85f393e07ba32aaf13d6ccd814444a555da34cedc04ce2f4af2",
+  "funding_deadline": 11435,
+  "network": "esmeralda",
+  "sponsor_budget_microtari": 2000000,
+  "sponsor_funded": false,
+  "template": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400"
+}

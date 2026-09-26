@@ -1,0 +1,152 @@
+{
+  "finalize": {
+    "transaction_hash": "f3c51298ee3f6baed0539dcd1497ba2480d2c50f08abb629384951a0e10bf2fa",
+    "events": [
+      {
+        "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": []
+        },
+        "return_type": "Unit"
+      }
+    ],
+    "result": {
+      "AcceptFeeRejectRest": [
+        {
+          "up_substates": [
+            [
+              "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+              {
+                "substate": {
+                  "Vault": {
+                    "resource_container": {
+                      "Stealth": {
+                        "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                        "revealed_amount": "994762235",
+                        "locked_amount": "0"
+                      }
+                    },
+                    "freeze_flags": 0
+                  }
+                },
+                "version": 3
+              }
+            ],
+            [
+              "txreceipt_f3c51298ee3f6baed0539dcd1497ba2480d2c50f08abb629384951a0e10bf2fa",
+              {
+                "substate": {
+                  "TransactionReceipt": {
+                    "outcome": "FeeIntentCommit",
+                    "diff_summary": {
+                      "upped": [
+                        {
+                          "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+                          "version": 3,
+                          "value_hash": "b3cf90cc546aeabbb21509f00ad60527ac9feaedc62d31da7f3af30cecfb675b"
+                        }
+                      ]
+                    },
+                    "fee_withdrawals": [],
+                    "events": [
+                      {
+                        "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+                        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "topic": "std.vault.pay_fee",
+                        "payload": {
+                          "amount": "5000000"
+                        }
+                      }
+                    ],
+                    "fee_receipt": {
+                      "total_fee_payment": 5000000,
+                      "total_fees_paid": 3214,
+                      "total_fee_overcharge": 0,
+                      "cost_breakdown": {
+                        "breakdown": {
+                          "RuntimeCall": 14,
+                          "Storage": 456,
+                          "TransactionWeight": 149,
+                          "TemplateLoad": 1010,
+                          "SubstateCreate": 25,
+                          "WasmExecution": 163,
+                          "NativeExecution": 1397
+                        }
+                      },
+                      "exhaust_burn": 160
+                    },
+                    "epoch": 11432,
+                    "intent_commitment": "9026175f1e2c88e895185b16e96af7a03133f35bee92927881507c60337b5cf2"
+                  }
+                },
+                "version": 0
+              }
+            ]
+          ],
+          "down_substates": [
+            [
+              "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+              2
+            ]
+          ],
+          "fee_withdrawals": []
+        },
+        {
+          "ExecutionFailure": "At instruction #1: Template error: assertion `left == right` failed: exact confidential budget not met\n  left: RistrettoPublicKeyBytes([200, 212, 108, 162, 60, 52, 221, 150, 40, 121, 181, 144, 66, 163, 175, 125, 179, 42, 192, 185, 68, 139, 226, 138, 136, 231, 201, 229, 220, 237, 70, 96])\n right: RistrettoPublicKeyBytes([136, 181, 132, 131, 117, 5, 87, 121, 124, 52, 90, 68, 166, 201, 59, 36, 76, 53, 38, 172, 97, 210, 82, 99, 237, 55, 235, 130, 88, 65, 21, 54])"
+        }
+      ]
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 3214,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 14,
+          "Storage": 456,
+          "TransactionWeight": 149,
+          "TemplateLoad": 1010,
+          "SubstateCreate": 25,
+          "WasmExecution": 163,
+          "NativeExecution": 1397
+        }
+      },
+      "exhaust_burn": 160
+    },
+    "total_fees_required": 3214
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 2879052
+  },
+  "execute_epoch": 11432,
+  "wasm_execution_points": 163842,
+  "native_execution_points": 1397032
+}

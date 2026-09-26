@@ -1,0 +1,39 @@
+[
+  {
+    "ok": true,
+    "response": {
+      "current_epoch": 11422,
+      "db_ok": true,
+      "epoch_manager_ok": true,
+      "network_ok": true,
+      "status": "ok",
+      "version": "0.41.2"
+    },
+    "path": "health"
+  },
+  {
+    "ok": true,
+    "response": {
+      "peer_id": "12D3L7AV9KrJvYnYgkZvmMurFwMdKui6bukTFwkyfBA5iMXyiWkv",
+      "public_key": "ba34200718ca4c6a0c30f687578bcbeb2cfe9d67971c84cc2dd89f94437d0d2f",
+      "public_addresses": [
+        "/ip4/127.0.0.1/udp/50123/quic-v1",
+        "/ip4/217.182.93.35/udp/50123/quic-v1",
+        "/ip4/172.17.0.1/udp/50123/quic-v1",
+        "/ip4/127.0.0.1/tcp/50123",
+        "/ip4/217.182.93.35/tcp/50123",
+        "/ip4/172.17.0.1/tcp/50123"
+      ]
+    },
+    "path": "identity"
+  },
+  {
+    "ok": true,
+    "response": {
+      "current_epoch": 11422,
+      "current_block_height": 913836,
+      "current_block_hash": "45bc54eceb5e059e699ed99c01e70d80715fa99d072220b71ceac7832a1d8817"
+    },
+    "path": "epoch-manager/stats"
+  }
+]

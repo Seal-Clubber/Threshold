@@ -1,0 +1,47 @@
+{
+  "network": "esmeralda",
+  "component": "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+  "total_refunded_microtari": 40000000,
+  "refunds": [
+    {
+      "owner": "alice",
+      "transaction_id": "8907ede224fda76eeb097775c414c12154c48f64adbea9ac55f632abbdf008ff",
+      "amount_microtari": 6000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 12240,
+      "native_proof_ms": 2012,
+      "encoded_transaction_bytes": 1569
+    },
+    {
+      "owner": "bob",
+      "transaction_id": "b294166711b8795b0c0f17482b074dfb2b0cd6b05956f10c70deb62b48665696",
+      "amount_microtari": 8000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 12240,
+      "native_proof_ms": 2009,
+      "encoded_transaction_bytes": 1569
+    },
+    {
+      "owner": "carol",
+      "transaction_id": "af25fb351878239fa4e2a7222eca6b66538c8062d394b50d5a63ab3b39128e53",
+      "amount_microtari": 10000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 12240,
+      "native_proof_ms": 2014,
+      "encoded_transaction_bytes": 1569
+    },
+    {
+      "owner": "sponsor",
+      "transaction_id": "4d9a22d3bdc2d75737d4a8a69ee949d1057ebf08efc76bb2d10ae8de5ab0241e",
+      "amount_microtari": 16000000,
+      "epoch": 11464,
+      "outcome": "Commit",
+      "fee_microtari": 12240,
+      "native_proof_ms": 2021,
+      "encoded_transaction_bytes": 1569
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "component": "component_82cad9632a4f5d2d6f07768d478a26a1e7032774faae6ab1f987a65fb7c97b58",
+  "delivery_deadlines": [
+    11452,
+    11453,
+    11454
+  ],
+  "funding_deadline": 11451,
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "live_budget_microtari": 100000000,
+  "network": "esmeralda",
+  "scale": "1:100 of brief example",
+  "template": "7324098fce367741408484cea7779a253303b0a5fed0a4c93ce1876d86778400"
+}

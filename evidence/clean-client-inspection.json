@@ -1,0 +1,22 @@
+{
+  "network": "esmeralda",
+  "inspected_epochs": [11433, 11434],
+  "client_location": "separate directory containing only copied Windows and Ubuntu binaries, encrypted packages, and unlock file",
+  "clients_exercised": ["Windows standalone", "Ubuntu WSL standalone"],
+  "missed_campaign": {
+    "pledge_id": 0,
+    "remaining_cells": 1,
+    "amount_microtari": 3000000,
+    "refund_epoch": 11435,
+    "premature_recover_result": "refund not yet eligible",
+    "journal_created": false
+  },
+  "partial_delivery": {
+    "remaining_cells_per_pledge": 1,
+    "community_amounts_microtari": [6000000, 8000000, 10000000],
+    "sponsor_amount_microtari": 16000000,
+    "total_remaining_microtari": 40000000,
+    "refund_epoch": 11454
+  },
+  "note": "The indexer returned its verified flag for component and eligible UTXOs; this client is not an independent consensus light client. No network refund transaction has been submitted at this epoch."
+}

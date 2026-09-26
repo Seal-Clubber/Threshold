@@ -1,0 +1,150 @@
+{
+  "finalize": {
+    "transaction_hash": "d8c034dafa3f2cd5396a6f8c0ec82ee16bf766cae42bf6bec3fde7edbbcf4631",
+    "events": [
+      {
+        "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+        "topic": "std.vault.pay_fee",
+        "payload": {
+          "amount": "5000000"
+        }
+      }
+    ],
+    "logs": [],
+    "execution_results": [
+      {
+        "indexed": {
+          "indexed": {
+            "bucket_ids": [],
+            "proof_ids": [],
+            "component_addresses": [],
+            "resource_addresses": [],
+            "transaction_receipt_addresses": [],
+            "non_fungible_addresses": [],
+            "vault_ids": [],
+            "metadata": [],
+            "unclaimed_confidential_output_address": [],
+            "published_template_addresses": [],
+            "validator_node_fee_pools": [],
+            "utxos": [],
+            "component_address_allocations": [],
+            "resource_address_allocations": [],
+            "confidential_outputs": []
+          },
+          "value": []
+        },
+        "return_type": "Unit"
+      }
+    ],
+    "result": {
+      "AcceptFeeRejectRest": [
+        {
+          "up_substates": [
+            [
+              "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+              {
+                "substate": {
+                  "Vault": {
+                    "resource_container": {
+                      "Stealth": {
+                        "address": "resource_0101010101010101010101010101010101010101010101010101010101010101",
+                        "revealed_amount": "994686349",
+                        "locked_amount": "0"
+                      }
+                    },
+                    "freeze_flags": 0
+                  }
+                },
+                "version": 12
+              }
+            ],
+            [
+              "txreceipt_d8c034dafa3f2cd5396a6f8c0ec82ee16bf766cae42bf6bec3fde7edbbcf4631",
+              {
+                "substate": {
+                  "TransactionReceipt": {
+                    "outcome": "FeeIntentCommit",
+                    "diff_summary": {
+                      "upped": [
+                        {
+                          "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+                          "version": 12,
+                          "value_hash": "25411f88bdf4122b99bb7b27818ee94263b6ebfc145594a1e7fee5881e50365d"
+                        }
+                      ]
+                    },
+                    "fee_withdrawals": [],
+                    "events": [
+                      {
+                        "substate_id": "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+                        "template_address": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "topic": "std.vault.pay_fee",
+                        "payload": {
+                          "amount": "5000000"
+                        }
+                      }
+                    ],
+                    "fee_receipt": {
+                      "total_fee_payment": 5000000,
+                      "total_fees_paid": 9274,
+                      "total_fee_overcharge": 0,
+                      "cost_breakdown": {
+                        "breakdown": {
+                          "RuntimeCall": 6,
+                          "Storage": 456,
+                          "TransactionWeight": 307,
+                          "SubstateCreate": 25,
+                          "WasmExecution": 16,
+                          "NativeExecution": 8464
+                        }
+                      },
+                      "exhaust_burn": 463
+                    },
+                    "epoch": 11442,
+                    "intent_commitment": "f63776cab44e947c90027f2afe724ab4b37c52767dd982ab1384e567353e4ff2"
+                  }
+                },
+                "version": 0
+              }
+            ]
+          ],
+          "down_substates": [
+            [
+              "vault_a97b63b55568e67dbafcf16002567f06dee95f709035248dbd4662cf4bdbb649",
+              11
+            ]
+          ],
+          "fee_withdrawals": []
+        },
+        {
+          "ExecutionFailure": "At instruction #1: No active call frame"
+        }
+      ]
+    },
+    "fee_receipt": {
+      "total_fee_payment": 5000000,
+      "total_fees_paid": 9274,
+      "total_fee_overcharge": 0,
+      "cost_breakdown": {
+        "breakdown": {
+          "RuntimeCall": 6,
+          "Storage": 456,
+          "TransactionWeight": 307,
+          "SubstateCreate": 25,
+          "WasmExecution": 16,
+          "NativeExecution": 8464
+        }
+      },
+      "exhaust_burn": 463
+    },
+    "total_fees_required": 9274
+  },
+  "execution_time": {
+    "secs": 0,
+    "nanos": 1105067
+  },
+  "execute_epoch": 11442,
+  "wasm_execution_points": 16604,
+  "native_execution_points": 8464344
+}
