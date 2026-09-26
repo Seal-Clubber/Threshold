@@ -1,4 +1,50 @@
-# Verification ledger
+# Tests and transaction evidence
+
+Threshold has recorded Esmeralda testnet transactions as well as local cryptographic and Ootle engine tests. This page connects the main claims to the files that support them. The website is a simulation; the evidence below comes from the contract and client.
+
+## Start here: inspect the evidence
+
+| Question | Recorded result | Evidence to open |
+|---|---|---|
+| Did the fully funded campaign activate? | The main campaign's activation receipt records `Commit`. The contract checks the community and sponsor budgets for every stage together. | [Activation receipt](../evidence/activation-receipt.json) · [Explorer transaction](https://ootle-indexer-a.tari.com/transactions/e02a099ca3bd01d25ee3872ed350d0e2cbcf26cf2f6ea1a9d15e16f317aaf31d) · [Missing bundle leg rejected in a dry run](../evidence/missing-bundle-leg-dry-run.json) |
+| Do reviewed payments require approval? | A release without the required approvals was rejected in a dry run. Two reviewer approvals and the subsequent payment have committed receipts. | [Rejected release](../evidence/unapproved-release-dry-run.json) · [First approval](../evidence/approval-1-0-receipt.json) · [Second approval](../evidence/approval-1-1-receipt.json) · [Payment receipt](../evidence/release-1-receipt.json) |
+| Can someone spend the locked funds outside the contract? | A submitted bypass attempt failed its main action. Only its fee committed; the receipt shows no campaign update. | [Bypass dry run and error](../evidence/direct-bypass-check-dry-run.json) · [Fee-only receipt](../evidence/direct-bypass-check-receipt.json) · [Explorer transaction](https://ootle-indexer-a.tari.com/transactions/e35ac8688266806f699308e14f45f63fe3c004778e9f39421cd4ed38b52af7ff) |
+| Were refunds actually recovered and usable? | A missed-funding refund and a subsequent private spend both committed. The recovery run recorded decryption and used a separate client while the coordinator was offline. | [Refund receipt](../evidence/missed-refund-receipt.json) · [Re-spend receipt](../evidence/missed-refund-respend-receipt.json) · [Recovery measurements and qualifications](../evidence/missed-recovery-metrics.json) · [Refund on explorer](https://ootle-indexer-a.tari.com/transactions/bfc6ca02c0df4994c229d06416a39854b57b95f914b8a0b47d194f7172d33dae) |
+| What happens after some work has already been paid? | The main campaign paid its 20 tTARI start and 40 tTARI delivery stages. Its unpaid 40 tTARI audit stage was later refunded to the four contributors. | [Start payment](../evidence/release-0-receipt.json) · [Delivery payment](../evidence/release-1-receipt.json) · [Alice refund](../evidence/audit-alice-refund-receipt.json) · [Bob refund](../evidence/audit-bob-refund-receipt.json) · [Carol refund](../evidence/audit-carol-refund-receipt.json) · [Sponsor refund](../evidence/audit-sponsor-refund-receipt.json) · [Recovery measurements](../evidence/audit-recovery-metrics.json) |
+| Was the 32-pledge limit exercised? | Activation and a payout consuming 32 private inputs committed. This used repeated test signing keys, not 32 independent people. | [Activation receipt](../evidence/scale32-activation-receipt.json) · [Payout receipt](../evidence/scale32-release-receipt.json) · [Capacity measurements](../evidence/scale32-metrics.json) · [Payout on explorer](https://ootle-indexer-a.tari.com/transactions/699be5e2cd7a3be7d0eaa7e8f2d31334215a8062c851a781c225ae284b856666) |
+| Was the website's 10% upfront example tested? | A local Ootle engine test rejects payment before full activation, accepts the 10% payment afterward, and refunds the unpaid 90% after its deadline. This is separate from the main testnet campaign's 20/40/40 schedule. | [Engine test source](../crates/threshold-client/tests/engine.rs) — `complete_bundle_then_ten_percent_upfront_and_partial_delivery_preserves_refunds` |
+
+The [testnet walkthrough](demo.md) contains the full transaction sequence, component and template addresses, and measurements. The [evidence directory](../evidence/) contains the saved JSON records.
+
+## How to read these records
+
+- **Committed transaction:** open a receipt and inspect `transaction_id` and `receipt.outcome`. `Commit` means the main action committed. Compare its transaction ID with the linked explorer record where available.
+- **Fee-only result:** `FeeIntentCommit` means fees committed but the campaign action failed. It must not be counted as a successful payment or activation. Inspect `diff_summary` to see which state changed.
+- **Dry run:** a trial execution tests acceptance or rejection without committing the action. It is evidence of the tested rejection, not a completed network transaction.
+- **Local test:** the test source and commands let another developer repeat the checks. A reported pass count alone is not independently verifiable proof of a past run.
+- **Measurements:** the metrics files summarize observations made by the client, such as decryption and running with the coordinator offline. Those facts cannot be established from a public transaction receipt alone.
+
+Some explorer responses have lacked a transaction summary. Saved client receipts are retained, but they are not independent consensus proofs. The recovery client uses an indexer for chain data; it does not implement a consensus light client. This page does not claim a fresh network recheck every time it is updated.
+
+## Repeat the local checks
+
+Use the pinned dependencies and Ubuntu WSL setup in the [README](../README.md#work-on-the-contract-and-client):
+
+```sh
+cargo test -p threshold-client --test crypto --locked
+cargo test -p threshold-client --features engine-tests --test engine --locked
+THRESHOLD_SCALE_PLEDGES=32 cargo test -p threshold-client --features engine-tests --test engine measured_multi_pledge_activation_and_release_in_engine --locked -- --nocapture
+```
+
+Sources: [cryptographic tests](../crates/threshold-client/tests/crypto.rs) and [engine tests](../crates/threshold-client/tests/engine.rs). These commands run local checks; they do not submit fresh testnet transactions. Published-binary reproduction requires the matching toolchain described below.
+
+## What this evidence does not establish
+
+These are reproducible tests and recorded execution evidence, not a formal proof of the entire protocol or production readiness. Reviewers still judge off-chain delivery. The contract cannot prove that a recipient can decrypt an encrypted payout; the recipient's client must check before signing. The [targeted cryptographic test](../crates/threshold-client/tests/crypto.rs) named `v1_payout_shape_does_not_prove_recipient_decryption` demonstrates that limitation rather than removing it.
+
+The five additional use-case templates have compilation and basic term checks only. They have not completed engine or testnet qualification and do not inherit the original template's results. See [their qualification status](#separate-use-case-pocs--compilation-and-term-checks-only) and the [security notes](security.md).
+
+## Detailed verification ledger
 
 This file separates code inspection, local cryptographic checks, Linux engine execution, and Esmeralda transactions. An accepted dry run is not a committed transaction. A fee-only success is a main-intent failure. Testnet commitments are evidence of execution on Esmeralda, not an audit or mainnet qualification.
 

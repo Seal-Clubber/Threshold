@@ -200,6 +200,4 @@ The [demo guide](docs/demo.md) records successful separate-client refunds and su
 - [Protocol rules](docs/protocol.md) and [security boundaries](docs/security.md)
 - [Testnet walkthrough](docs/demo.md) and [verification ledger](docs/verification.md)
 - [Use cases](docs/use-cases.md) and [scaling beyond the current limits](docs/scaling.md)
-- [Comparison with related projects](docs/comparisons.md)
 - [Dependencies and licenses](docs/dependencies.md)
-- [Forum and social post drafts](docs/publication-drafts.md)
