@@ -1,0 +1,104 @@
+{
+  "bounties": [
+    {
+      "component": "component_d2234374e9c20112c43b87c9dbe95d61479b9bb1800a52c6924af9f29f5d0e2e",
+      "issue": 900001,
+      "quorum": 1,
+      "reviewers": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b"
+      ],
+      "transactions": {
+        "create": "c66d3effffb205dd4ada3c8b3147120de5eef98195ef2da7efadad077d0a4f50",
+        "fund": "f73b4584e93ee58860a10612b11a5742757bbf3566b090ce0d8e83a18a9d7961",
+        "noWork": "26e7358f848819a289085714a0bdc312c5a6ffe98e552a34ca4da44393e3eae1",
+        "refund": "23a9bfa3a9ee2bfd2e91b1c12ec6a98d122d785b0d75a5841a2e21d844ec25de"
+      }
+    },
+    {
+      "component": "component_0943a69bf6ad908b31a8e9cedc392d3199ba0902676e76dffa77ddf59558d012",
+      "issue": 900002,
+      "quorum": 2,
+      "reviewers": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "transactions": {
+        "approve": "38697b661304e71fc924bd8a3b20e6b736be71e52f40a1b7a81fd579b8e70c3d",
+        "claim": "d8b0e23d5d3b4ae1b6923cf247ba8ef4336a4b44d669598d4b9f2eea5f6d933e",
+        "create": "eab96bd9ba48e4b1c500d920052776db19d516caae3301014d9ceb0a80244320",
+        "fund": "f3da5e496a4371968663f3dd8f05837b6c9d54e6f4185908b0f400f5407e40f7",
+        "propose": "f6269995ec57277c298af37ba7aa8e31b02e9ed48d6e34692c6b9f23dc3904c7",
+        "setReviewers": "0b61c9e6adc22be84ba8a775175120ba9454e7b378932ddc0966c30e5432e9ca"
+      }
+    },
+    {
+      "component": "component_ce8c7163cae0d5c34c74d18d32d481e0534ea1051e42b7a73937749fae9247cc",
+      "issue": 900003,
+      "quorum": 1,
+      "reviewers": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "transactions": {
+        "create": "425af976012f30c1e1ed398746a795b425539c0c25dbc9b6a893a5c774dfca95",
+        "fund": "2c716ca995df4e71ce1983b9da14ac8e4b2acb5d00fbb878e675dd34e540b4c4",
+        "setReviewers": "5609ba3b774aaf19acc7f92324d133987449104e7a26f77d33985cc36954ba45"
+      }
+    },
+    {
+      "component": "component_d68486c72687fa3b53e507b656ba785885361639fcc7136b225d315a93ae754b",
+      "issue": 900004,
+      "quorum": 1,
+      "reviewers": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b"
+      ],
+      "transactions": {
+        "create": "20d38d55931319e156f31193e4e4d21d4c2e5b9de9c1bf0e8a6771c4c373c989",
+        "fund": "5ca4c8a9de7cc1f6b1cc1c18318f6cf957e797092bbc99de384b4fb6a49ba882"
+      }
+    },
+    {
+      "component": "component_749a560852579da74e1856e6227f4fb376e93d7c016651577b8f49bffb5d93f6",
+      "issue": 900005,
+      "quorum": 2,
+      "reviewers": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "transactions": {
+        "create": "b3375cc4a5c40d401bfacb52d7bcf14bd41d1541868f07cc8403bc4a22016a4b",
+        "fund": "cde00fff509d976ad5ffbd6556eff99eea8617df9edc1569847f99c0a5e74645",
+        "setReviewers": "26c4bea6fe8d52b9edc3a25952c2cea51030b25224ebbd47848f458640e4d9da"
+      }
+    }
+  ],
+  "identity_note": "All council and treasury labels are demonstration keys, not Tari-designated identities.",
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "network": "esmeralda",
+  "people": [
+    {
+      "key": "eeced83ade4eff225844e4b7bc7e42b305b37eebda4b6eb908f33ed64071e44b",
+      "name": "Demo Tari treasury"
+    },
+    {
+      "key": "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+      "name": "Demo council member 1"
+    },
+    {
+      "key": "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+      "name": "Demo council member 2"
+    },
+    {
+      "key": "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f",
+      "name": "Demo council member 3"
+    },
+    {
+      "key": "000639101a2e5e665a7f349e64e0d8d2cc286f57cb1dc953a93ca7415505b214",
+      "name": "Demo contributor"
+    }
+  ],
+  "template": "29468dbacd59e120c99867c7e594a6a1e790d8f6c8d36c625ccd28abece07b01"
+}

@@ -8,9 +8,11 @@ If funding falls short or work stalls, contributors can reclaim their eligible u
 
 **[Explore the demo and Sandbox →](https://seal-clubber.github.io/Threshold/)**
 
-The website explains the idea and lets you try different outcomes. It is a simulation: no wallet is needed and no funds move. The contract has also been exercised on testnet; the [testnet demo guide](docs/demo.md) contains the recorded transactions.
+The interactive map explains the idea and lets you try different outcomes. It is a simulation: no wallet is needed and no funds move through the site. A separate [offline bounty archive](https://seal-clubber.github.io/Threshold/bounties-archive.html) preserves five examples from the former Esmeralda testnet; the current-chain board awaits fresh transactions. The published v1 contract was also exercised on the former testnet; the [testnet demo guide](docs/demo.md) contains its recorded transactions.
 
 > This is unaudited, experimental testnet software. It is not ready to hold real funds.
+
+**Separate bounty submission:** [Bounties powered by Threshold](crates/threshold-bounty-template/README.md) is a dedicated council-reviewed issue escrow template with [archived Esmeralda transaction proof](crates/threshold-bounty-template/README.md#archived-esmeralda-proof). Its offline archive records five synthetic components, including three that were funded and open when captured. It is an independent proposal, not an official Tari bounty program.
 
 ## How it works
 
@@ -73,9 +75,13 @@ Separate Rust template crates now cover **exchange funding, development and audi
 
 See [the template guide](docs/campaign-templates.md) for the crates, constructors, example payments, and unfinished work.
 
+### Tari-style issue bounties (experimental proposal)
+
+A separate [bounty escrow template](crates/threshold-bounty-template/) models Tari's public GitHub bounty tiers and review workflow on Ootle. A council manager sets one to five reviewer keys and a quorum, such as 1-of-1 or 2-of-3, before treasury funding freezes the terms. The same review quorum can award work or close an unawarded bounty as “no work”; the original funding key can then reclaim the full locked amount. There is no automatic deadline. The [rule mapping and migration gaps](docs/bounty-program.md) explain the differences from Tari's current process and the work needed before any official replacement. The [offline bounty archive](https://seal-clubber.github.io/Threshold/bounties-archive.html) preserves five former-chain synthetic examples and their committed receipts. [Archived transaction proof](crates/threshold-bounty-template/README.md#archived-esmeralda-proof) sits beside the template. Tari has not adopted the program.
+
 ## What is enforced, and what still needs trust?
 
-The contract checks the funding amounts, payment order, required approvals, and deadlines. An organizer cannot bypass those rules or approve someone else's refund.
+The published v1 campaign contract checks the funding amounts, payment order, required approvals, and deadlines. An organizer cannot bypass those rules or approve someone else's refund.
 
 People still judge whether the work is good. Reviewers can make mistakes or approve poor work. Threshold enforces their approvals; it cannot prove that a feature works, an audit found every bug, or an exchange will list a token.
 
@@ -94,7 +100,7 @@ Read the [security notes](docs/security.md) and [protocol specification](docs/pr
 
 ## What has been demonstrated?
 
-The repository contains local tests and recorded transactions from Ootle's **Esmeralda testnet**, using the pinned **v0.41.2** tooling.
+The repository contains local tests and historical transactions from the former **Esmeralda testnet**, using the pinned **v0.41.2** tooling. The network reset after those transactions were recorded.
 
 - Confidential pledges, full campaign activation, reviewer approvals, and milestone payments.
 - Rejection of incomplete funding, unapproved payments, and attempts to spend locked funds outside the contract.
@@ -123,7 +129,7 @@ node scripts/check-pages.mjs
 node scripts/check-sandbox.mjs
 ```
 
-The result is in `_site/`. The [GitHub Pages guide](docs/github-pages.md) explains deployment. Transaction evidence stays in the repository rather than being loaded by the website.
+The result is in `_site/`. Run `node scripts/preview-pages.mjs` and open `http://127.0.0.1:4766/threshold/bounties-archive.html` to inspect the offline bounty page. The [GitHub Pages guide](docs/github-pages.md) explains deployment. The archive bundles 19 public bounty action and template receipts; the older campaign evidence remains in the repository.
 
 ## Work on the contract and client
 
@@ -150,49 +156,22 @@ The published contract binary matches a fresh **Windows Rust 1.97.1** release bu
 </details>
 
 <details>
-<summary>Run the testnet demonstrations</summary>
+<summary>Historical testnet demonstrations</summary>
 
-These commands submit real **testnet** transactions using faucet tokens. They are fixed integration examples, not a production wallet or a general campaign creation service.
+The main, missed-funding, partial-delivery, and scaling demonstrations submitted real faucet-funded transactions on the former Esmeralda chain. Their saved receipts and journals refer to that chain. **Do not rerun the submission commands against the reset testnet as-is:** a fresh run needs new network qualification and a separate receipt namespace so historical transactions cannot be mistaken for current ones.
 
-After installing the build requirements above, [`scripts/demo.sh`](scripts/demo.sh) builds and publishes the contract, obtains faucet tokens, and runs or resumes the main, missed-funding, and partial-delivery examples.
-
-You can also run individual commands from the repository root:
-
-```sh
-cargo run -p threshold-client --locked --bin threshold -- help
-cargo run -p threshold-client --locked --bin threshold -- demo
-cargo run -p threshold-client --locked --bin threshold -- missed
-cargo run -p threshold-client --locked --bin threshold -- partial
-cargo run -p threshold-client --locked --bin threshold -- scale8
-cargo run -p threshold-client --locked --bin threshold -- scale16
-cargo run -p threshold-client --locked --bin threshold -- scale32
-```
-
-`demo` covers funding and reviewed payments. `missed` covers an unfunded campaign. `partial` covers a campaign with a start payment and unpaid funds to recover. The `scale` commands measure payments with different numbers of pledge records; they reuse test identities.
-
-Commands resume from saved transaction records. **Do not delete a pending transaction journal to force a retry.** Let the client check whether the previous submission completed.
-
-Template and campaign addresses, transaction IDs, and recovery results are listed in the [testnet demo guide](docs/demo.md).
+The historical commands remain in [`scripts/demo.sh`](scripts/demo.sh) and the client source for reference. The [testnet demo guide](docs/demo.md) records template and campaign addresses, transaction IDs, and recovery results. The [verification ledger](docs/verification.md) distinguishes committed actions from dry runs and fee-only failures.
 
 </details>
 
 <details>
-<summary>Recover funds with a separate client</summary>
+<summary>How the former-chain recovery demonstration worked</summary>
 
-Before a pledge is signed, the demo exports an encrypted `.local/portable-NAME.recovery` package. Keep a backup of that package and the separate `.local/unlock.secret` file in secure storage. **A seed alone is not enough for this implementation. Never publish either recovery material or the unlock file.** The `.local/` directory is ignored by Git.
+Before a pledge was signed, the demo exported an encrypted `.local/portable-NAME.recovery` package. Recovery required that package and the separate `.local/unlock.secret` file. **A seed alone was not enough for this implementation. Never publish either recovery material or the unlock file.** The `.local/` directory is ignored by Git.
 
-Copy the client binary, your recovery package, and the unlock file into a clean directory. You do not need the original project folder, organizer, or Threshold server:
+The separate client checked eligibility, submitted an eligible refund, verified the received funds, and spent the recovered output again without the organizer or Threshold website. Those transactions were completed on the former chain; its balances cannot be recovered on the reset chain.
 
-```sh
-threshold inspect carol.recovery unlock.secret
-threshold recover carol.recovery unlock.secret
-threshold verify-refund carol.recovery unlock.secret
-threshold respend-refund carol.recovery unlock.secret
-```
-
-`inspect` checks the current campaign and your refund eligibility. `recover` submits an eligible refund. `verify-refund` checks the resulting funds. `respend-refund` demonstrates that the recovered funds can be spent again.
-
-The client checks fresh network data, verifies the expected contract and terms, and pays transaction fees from the owner's account. It keeps a transaction journal to avoid submitting duplicates after a restart. An optional indexer URL can be supplied as the final argument. An unavailable or misleading indexer remains a risk; this client is not an independent consensus verifier.
+The client design checks network data, verifies the expected contract and terms, and pays transaction fees from the owner's account. It keeps a transaction journal to avoid submitting duplicates after a restart. An unavailable or misleading indexer remains a risk; this client is not an independent consensus verifier.
 
 The [demo guide](docs/demo.md) records successful separate-client refunds and subsequent spending of those refunds.
 

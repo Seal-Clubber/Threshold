@@ -4754,6 +4754,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "threshold-bounty-demo"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "hex",
+ "ootle-rs",
+ "ootle_byte_type",
+ "rand 0.10.3",
+ "serde",
+ "serde_json",
+ "tari_crypto",
+ "tari_engine_types",
+ "tari_ootle_transaction",
+ "tari_ootle_wallet_crypto",
+ "tari_template_lib",
+ "tari_utilities",
+ "threshold-bounty-template",
+ "threshold-client",
+ "tokio",
+]
+
+[[package]]
+name = "threshold-bounty-template"
+version = "0.1.0"
+dependencies = [
+ "blake2 0.10.6",
+ "borsh",
+ "minicbor",
+ "ootle-rs",
+ "ootle_byte_type",
+ "serde",
+ "tari_crypto",
+ "tari_engine_types",
+ "tari_ootle_template_build",
+ "tari_ootle_transaction",
+ "tari_ootle_wallet_crypto",
+ "tari_template_lib",
+ "tari_template_test_tooling",
+ "threshold-client",
+]
+
+[[package]]
 name = "threshold-client"
 version = "0.1.0"
 dependencies = [

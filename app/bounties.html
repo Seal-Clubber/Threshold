@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071522">
+  <title>Threshold · Esmeralda bounty board</title>
+  <meta name="description" content="Read-only Esmeralda bounty escrow board with live reviewer quorums and transaction evidence.">
+  <link rel="stylesheet" href="./bounties.css">
+  <script src="./bounties.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./">threshold<span>.</span></a>
+      <span class="network-pill"><i></i> ESMERALDA TESTNET</span>
+      <a class="back-link" href="./">← Interactive demo</a>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">A PROPOSED TARI BOUNTY WORKFLOW</p>
+        <h1>Who reviews the work?</h1>
+        <p class="lead">Each bounty fixes its council reviewer keys and approval threshold when the Tari treasury funds it. This read-only board is reserved for fresh Esmeralda components.</p>
+        <div class="notice"><strong>Testnet reset.</strong> The five completed demo records belong to the former Esmeralda chain. View the <a href="./bounties-archive.html">offline proof archive</a> for their saved reviewer rules, states, and transaction receipts. No current-chain bounties are listed yet. All identities and issues are synthetic; Tari has not adopted this program.</div>
+        <div class="hero-actions">
+          <button id="refresh" type="button">↻ Refresh chain state</button>
+          <span id="sync-status" role="status">Loading known components…</span>
+        </div>
+      </section>
+      <section class="board" aria-labelledby="board-title">
+        <div class="section-head"><div><p class="eyebrow">CURRENT CHAIN</p><h2 id="board-title">Bounty escrows</h2></div><span id="count" class="count">0 components</span></div>
+        <div id="bounty-list" class="bounty-list" aria-live="polite"></div>
+      </section>
+      <section class="explainer" aria-labelledby="explainer-title">
+        <div><p class="eyebrow">THE DECISION RULE</p><h2 id="explainer-title">1 of 1 or 2 of 3. Set before funding.</h2></div>
+        <p>A council member creates and can revise the request. The reviewer list and quorum are adjustable until funding; funding freezes them. A matching quorum approves an award or a no-work closure. XL awards also need their configured steward quorum. There is no deadline. A no-work closure lets the original treasury signer reclaim the full untouched escrow before a final award.</p>
+      </section>
+      <section class="discovery" aria-labelledby="discovery-title">
+        <div><p class="eyebrow">ADDING A BOUNTY</p><h2 id="discovery-title">How does it appear here?</h2></div>
+        <p>For this demo, the client creates and funds a component, records its address in a small public list, and the site build publishes that list. The board then reads each component’s current state from Ootle every 30 seconds. A new address needs a list update and site deployment before it appears.</p>
+        <p>A future council-controlled on-chain registry could hold approved component addresses and name labels. The board could read that registry so newly registered bounties appear without a site deployment. Scanning every component made from this template would also include unauthorised lookalikes.</p>
+      </section>
+      <footer>Each card requires the Esmeralda indexer’s <code>verified</code> flag and the expected template address. The indexer is a data source, not an independent consensus light client. This page cannot submit transactions.</footer>
+    </main>
+  </div>
+</body>
+</html>

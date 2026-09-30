@@ -7,6 +7,8 @@ members = [
     "crates/threshold-infrastructure-template",
     "crates/threshold-grant-template",
     "crates/threshold-community-template",
+    "crates/threshold-bounty-template",
+    "crates/threshold-bounty-demo",
 ]
 resolver = "2"
 

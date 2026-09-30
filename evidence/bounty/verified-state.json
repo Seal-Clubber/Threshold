@@ -1,0 +1,117 @@
+{
+  "checked_at_utc": "2026-09-30T03:06:52.622135+00:00",
+  "network": "esmeralda",
+  "indexer": "https://ootle-indexer-a.tari.com",
+  "source": "indexer-verified component reads; not an independent consensus light client",
+  "full_commit_receipts_checked": 143,
+  "components": [
+    {
+      "component": "component_d2234374e9c20112c43b87c9dbe95d61479b9bb1800a52c6924af9f29f5d0e2e",
+      "issue": 900001,
+      "verified": true,
+      "substate_version": 3,
+      "reviewer_keys": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b"
+      ],
+      "review_quorum": 1,
+      "award_votes": [
+        false
+      ],
+      "no_work_votes": [
+        "5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b"
+      ],
+      "status_code": 4,
+      "remaining_microtari": 0
+    },
+    {
+      "component": "component_0943a69bf6ad908b31a8e9cedc392d3199ba0902676e76dffa77ddf59558d012",
+      "issue": 900002,
+      "verified": true,
+      "substate_version": 5,
+      "reviewer_keys": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "review_quorum": 2,
+      "award_votes": [
+        true,
+        true,
+        false
+      ],
+      "no_work_votes": [
+        null,
+        null,
+        null
+      ],
+      "status_code": 5,
+      "remaining_microtari": 0
+    },
+    {
+      "component": "component_ce8c7163cae0d5c34c74d18d32d481e0534ea1051e42b7a73937749fae9247cc",
+      "issue": 900003,
+      "verified": true,
+      "substate_version": 2,
+      "reviewer_keys": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "review_quorum": 1,
+      "award_votes": [
+        false,
+        false,
+        false
+      ],
+      "no_work_votes": [
+        null,
+        null,
+        null
+      ],
+      "status_code": 0,
+      "remaining_microtari": 15000000000
+    },
+    {
+      "component": "component_d68486c72687fa3b53e507b656ba785885361639fcc7136b225d315a93ae754b",
+      "issue": 900004,
+      "verified": true,
+      "substate_version": 1,
+      "reviewer_keys": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b"
+      ],
+      "review_quorum": 1,
+      "award_votes": [
+        false
+      ],
+      "no_work_votes": [
+        null
+      ],
+      "status_code": 0,
+      "remaining_microtari": 15000000000
+    },
+    {
+      "component": "component_749a560852579da74e1856e6227f4fb376e93d7c016651577b8f49bffb5d93f6",
+      "issue": 900005,
+      "verified": true,
+      "substate_version": 2,
+      "reviewer_keys": [
+        "a0206e23997c36d2283f7a5cbe8708f942ea3e74782f5affd7a1264fcbc4455b",
+        "027db76eb167112fed3c4b7c200f94642ab29e1cd7adb666fafa0a1937fc8f29",
+        "86cc18199a9a24f2b2ed146416f47daefa9f83c30850cbea4c078aa880c5853f"
+      ],
+      "review_quorum": 2,
+      "award_votes": [
+        false,
+        false,
+        false
+      ],
+      "no_work_votes": [
+        null,
+        null,
+        null
+      ],
+      "status_code": 0,
+      "remaining_microtari": 15000000000
+    }
+  ]
+}
